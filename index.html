@@ -18,6 +18,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -298,73 +299,94 @@
                 </div>
             </div>
 
-            <!-- Team Members Placeholder -->
-            <div class="team-section">
-                <h3 class="team-title">Nuestro Equipo</h3>
+            <!-- TEAM SECTION -->
+            <section class="team-section">
+                <h2 class="team-title">Nuestro Equipo</h2>
                 <p class="team-description">
-                    Somos estudiantes de diversos grados, cada uno aportando habilidades únicas en programación,
-                    diseño, robótica, y gestión de proyectos.
+                    Somos u de estudiantes apasionados por la tecnología y la sostenibilidad.
+                    Cada uno aporta habilidades únicas en programación, diseño, robótica y gestión de proyectos.
                 </p>
 
                 <div class="team-grid">
+                    <!-- Integrante 1 - Stiven (borde verde neón + emoji) -->
                     <div class="team-member">
-                        <div class="team-photo-placeholder" style="cover; border: 2px #000000">
-                            <img src="img-lider-integrantes/Stiven-1.png" alt="Nombre del miembro"
-                                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 4px solid #000000;">
+                        <div class="team-photo-placeholder stiven">
+                            <img src="img-lider-integrantes/Stiven-1.png"
+                                alt="Stiven Urrego - Desarrollador de software">
                         </div>
                         <p class="team-member-name">🛠️Stiven Urrego🔧</p>
-                        <p class="team-member-label">Integrante 1 <br>Desarrollador <br> de sofware💻</p>
+                        <p class="team-member-label">Desarrollador de software💻<br>Integrante 1  </p>
                     </div>
+
+                    <!-- Integrante 2 - Isa (borde negro + emoji) -->
                     <div class="team-member">
-                        <div class="team-photo-placeholder"  style="cover; border: 2px #5d0188">
-                            <img src="img-lider-integrantes/Isa-2.jpg" alt="Nombre del miembro"
-                                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 4px solid #5d0188;">
+                        <div class="team-photo-placeholder isa">
+                            <img src="img-lider-integrantes/Isa-2.jpg" alt="Isa Quintero - Desarrolladora">
                         </div>
                         <p class="team-member-name">★Isabella Quevedo★</p>
-                        <p class="team-member-label">Integrante 2 <br>Divulgadora <br>Desarrolladora de prototipo</p>
+                        <p class="team-member-label">Divulgadora y desarrolladora de prototipos <br>Integrante 2</p>
                     </div>
+
+                    <!-- Integrante 3 - Mariana -->
                     <div class="team-member">
-                        <div class="team-photo-placeholder">
-                            <img src="img-lider-integrantes/mariana-2.jpg" alt="Nombre del miembro"
-                                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid #00F771;">
+                        <div class="team-photo-placeholder mariana"> 
+                            <img src="img-lider-integrantes/Mariana-2.jpg"
+                                alt="Mariana Acosta - Divulgadora y desarrolladora de prototipos">
                         </div>
                         <p class="team-member-name">Mariana Acosta🥰</p>
-                        <p class="team-member-label">Integrante 3 <br>Divulgadora <br>Desarrolladora de prototipo</p>
+                        <p class="team-member-label">Divulgadora y desarrolladora de prototipos <br>Integrante 3</p>
                     </div>
+
+                    <!-- Integrante 4 - Denisse (borde blanco + emoji) -->
                     <div class="team-member">
-                        <div class="team-photo-placeholder" style="cover; border: 2px #ffffff">
-                            <img src="img-lider-integrantes/Denisse.jpg" alt="Nombre del miembro"
-                                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 4px solid #ffffff;">
+                        <div class="team-photo-placeholder denisse">
+                            <img src="img-lider-integrantes/Denisse.jpg" alt="Denisse Rodríguez - Programadora">
                         </div>
-                        <p class="team-member-name">Denisse Rodriguez🌺</p>
-                        <p class="team-member-label">Integrante 4 <br>Progamadora De codigo</p>
+                        <p class="team-member-name">Denisse Rodríguez🌺</p>
+                        <p class="team-member-label">Programadora de codigo <br>Integrante 4</p>
                     </div>
+
+                    <!-- Integrante 5 - Kevin -->
                     <div class="team-member">
-                        <div class="team-photo-placeholder">
-                            <img src="img-lider-integrantes/Kevin.jpg" alt="Nombre del miembro"
-                                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid #00F771;">
+                        <div class="team-photo-placeholder kevin">
+                            <img src="img-lider-integrantes/Kevin.jpg" alt="Kevin Montoya - Integrante">
                         </div>
-                        
                         <p class="team-member-name">Kevin Montoya</p>
-                        <p class="team-member-label">Integrante 5 <br>¿?</p>
+                        <p class="team-member-label">Ayudante de creador de videojuegos <br>Integrante 5</p>
                     </div>
+
+                    <!-- Integrante 6 - Sofía -->
                     <div class="team-member">
                         <div class="team-photo-placeholder">
-                            <img src="img-lider-integrantes/Sofia.jpg" alt="Nombre del miembro"
-                                style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid #00F771;">
+                            <img src="img-lider-integrantes/Sofia.jpg" alt="Sofía Correa - Diseñadora">
                         </div>
-                        <p class="team-member-name">Sofia Correa</p>
-                        <p class="team-member-label">Integrante 6 <br>Diseñeadora</p>
+                        <p class="team-member-name">Sofia Villagas</p>
+                        <p class="team-member-label">Diseñadora <br>Integrante 6</p>
+                    </div>
+                    <!--Integrante 7 - karel -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder karel">
+                            <img src="img-lider-integrantes/Karel.jpg" alt="karel">
+                        </div>
+                        <p class="team-member-name">Karel Gonzales</p>
+                        <p class="team-member-label">Desarrollador de videojuegos <br>Integrante 7</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo-placeholder mohira">
+                            <img src="img-lider-integrantes/mohira.jpg" alt="mohira">
+                        </div>
+                        <p class="team-member-name"></p>
+                        <p class="team-member-label"> <br>Integrante 7</p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </section>
 
     <!-- ============================================
-         SECTION: PROYECTOS
-         INSTRUCCIONES: Para agregar proyectos, busca el array "projects" en script.js
-         ============================================ -->
+        SECTION: PROYECTOS
+        INSTRUCCIONES: Para agregar proyectos, busca el array "projects" en script.js
+    ============================================ -->
     <section id="projects" class="projects-section">
         <div class="container">
             <div class="section-header">
@@ -444,8 +466,7 @@
                             <span>Enviar Mensaje</span>
                         </button>
 
-                        <p class="form-note">Nota inportante: Configurar la integración.....
-                            pendiente proxima actualizacón
+                        
                     </form>
                 </div>
 
@@ -467,7 +488,6 @@
                                 <h4 class="contact-item-title">Ubicación</h4>
                                 <p class="contact-item-text">
                                     Colegio Celestino Mutis<br>
-                                    📍 (Inserta dirección completa aquí)
                                 </p>
                             </div>
                         </div>

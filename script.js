@@ -273,54 +273,61 @@ function renderProjects() {
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
-    
+
+    // Inicializar EmailJS con tu Public Key
+    emailjs.init('ibWeP7W-ngDc8fiuD');
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         const submitBtn = document.getElementById('submitBtn');
         const formSuccess = document.getElementById('formSuccess');
         
-        // Deshabilitar botón y mostrar loading
+        // Mostrar estado de carga
         submitBtn.disabled = true;
         submitBtn.innerHTML = `
             <div style="width: 20px; height: 20px; border: 2px solid #003727; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></div>
             <span>Enviando...</span>
         `;
         
-        // Agregar animación de spin
-        if (!document.querySelector('#spinAnimation')) {
-            const style = document.createElement('style');
-            style.id = 'spinAnimation';
-            style.textContent = `
-                @keyframes spin {
-                    to { transform: rotate(360deg); }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        // Simulación de envío (en producción, aquí iría la lógica real)
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = `
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-                <span>Enviar Mensaje</span>
-            `;
-            
-            // Mostrar mensaje de éxito
-            formSuccess.style.display = 'block';
-            
-            // Limpiar formulario
-            contactForm.reset();
-            
-            // Ocultar mensaje después de 5 segundos
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-            }, 5000);
-        }, 1500);
+        // Enviar email con EmailJS
+        emailjs.sendForm('service_r9k026l', 'template_w2p6vr8', contactForm)
+            .then(function(response) {
+                console.log('SUCCESS:', response);
+                
+                // Restaurar botón
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    <span>Enviar Mensaje</span>
+                `;
+                
+                // Mostrar mensaje de éxito
+                formSuccess.style.display = 'block';
+                
+                // Limpiar formulario
+                contactForm.reset();
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                }, 5000);
+            })
+            .catch(function(error) {
+                console.log('FAILED:', error);
+                alert('Error al enviar. Por favor intenta de nuevo.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    <span>Enviar Mensaje</span>
+                `;
+            });
     });
 }
 
