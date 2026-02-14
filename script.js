@@ -393,6 +393,25 @@ document.addEventListener('DOMContentLoaded', function() {
 // Exponer funciones globalmente para uso en HTML
 window.scrollToSection = scrollToSection;
 window.scrollToTop = scrollToTop;
+window.toggleTeamMembers = toggleTeamMembers;
+
+// Función para mostrar/ocultar más integrantes
+function toggleTeamMembers() {
+    const teamMore = document.getElementById('teamMore');
+    const viewMoreBtn = document.getElementById('teamViewMore');
+    const viewMoreText = viewMoreBtn.querySelector('.view-more-text');
+    const viewMoreIcon = viewMoreBtn.querySelector('.view-more-icon');
+    
+    if (teamMore.classList.contains('active')) {
+        teamMore.classList.remove('active');
+        viewMoreText.textContent = 'Ver más';
+        viewMoreIcon.textContent = '▼';
+    } else {
+        teamMore.classList.add('active');
+        viewMoreText.textContent = 'Ver menos';
+        viewMoreIcon.textContent = '▲';
+    }
+}
 
 // Debug: Mostrar mensaje en consola
 console.log('%c🌱 EcoProgramadores STEAM MUTIS', 'color: #00F771; font-size: 20px; font-weight: bold;');
