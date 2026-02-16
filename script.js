@@ -3,56 +3,7 @@
 // INSTRUCCIONES: Para agregar un nuevo proyecto, añade un objeto al array "projects"
 // ============================================
 
-const projects = [
-    {
-        id: 1,
-        title: '',
-        description: '',
-        image: '',
-        date: 'Enero 2026',
-        category: 'IoT'
-    },
-    {
-        id: 2,
-        title: 'App EcoRecicla',
-        description: '',
-        image: '',
-        date: 'Diciembre 2025',
-        category: 'App'
-    },
-    {
-        id: 3,
-        title: 'Robot Recolector',
-        description: 'Prototipo de robot autónomo que recolecta basura en áreas verdes. Equipado con sensores ultrasónicos y cámara para navegación inteligente.',
-        image: '',
-        date: 'Noviembre 2025',
-        category: 'Hardware'
-    },
-    {
-        id: 4,
-        title: 'EstaciónEscolar',
-        description: '',
-        image: '',
-        date: 'Octubre 2025',
-        category: 'IoT'
-    },
-    {
-        id: 5,
-        title: '',
-        description: '',
-        image: '',
-        date: 'Septiembre 2025',
-        category: 'Hardware'
-    },
-    {
-        id: 6,
-        title: 'Portal Web Educativo Eco',
-        description: 'Sitio web interactivo con recursos educativos sobre sostenibilidad, cambio climático y tecnologías verdes. Incluye juegos y quizzes para estudiantes.',
-        image: 'h',
-        date: 'Agosto 2025',
-        category: 'Web'
-    }
-];
+
 
 // ============================================
 // NAVEGACIÓN Y SCROLL
@@ -394,6 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
 window.scrollToSection = scrollToSection;
 window.scrollToTop = scrollToTop;
 window.toggleTeamMembers = toggleTeamMembers;
+window.toggleGalleryCard = toggleGalleryCard;
 
 // Función para mostrar/ocultar más integrantes
 function toggleTeamMembers() {
@@ -413,7 +365,21 @@ function toggleTeamMembers() {
     }
 }
 
+// Función para expandir/colapsar tarjetas de galería
+function toggleGalleryCard(card) {
+    // Cerrar otras tarjetas
+    document.querySelectorAll('.gallery-card.expanded').forEach(expandedCard => {
+        if (expandedCard !== card) {
+            expandedCard.classList.remove('expanded');
+        }
+    });
+    
+    // Toggle la tarjeta clickeada
+    card.classList.toggle('expanded');
+}
+
 // Debug: Mostrar mensaje en consola
 console.log('%c🌱 EcoProgramadores STEAM MUTIS', 'color: #00F771; font-size: 20px; font-weight: bold;');
 console.log('%cSitio Web Desarrollado con HTML, CSS y JavaScript', 'color: #00C8E6; font-size: 14px;');
 console.log('%cProgramando un futuro sostenible 💻🌿', 'color: #00A65A; font-size: 12px;');
+

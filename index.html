@@ -41,7 +41,8 @@
                 <div class="nav-links" id="navLinks">
                     <a href="#home" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">Quiénes Somos</a>
-                    <a href="#projects" class="nav-link">Proyectos</a>
+                    <a href="#Team" class="nav-link">Equipo</a>
+                    <a href="#gallery" class="nav-link">Galería</a>
                     <a href="#contact" class="nav-link-button">Contacto</a>
                 </div>
 
@@ -50,6 +51,7 @@
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
+                    
                 </button>
             </div>
 
@@ -57,7 +59,8 @@
             <div class="mobile-menu" id="mobileMenu">
                 <a href="#home" class="mobile-nav-link">Home</a>
                 <a href="#about" class="mobile-nav-link">Quiénes Somos</a>
-                <a href="#projects" class="mobile-nav-link">Proyectos</a>
+                <a href="#Team" class="mobile-nav-link">Equipo</a>
+                <a href="#gallery" class="mobile-nav-link">Galería</a>
                 <a href="#contact" class="mobile-nav-link">Contacto</a>
             </div>
         </nav>
@@ -78,11 +81,11 @@
             <div class="logo-circle hero-logo">
                 <img src="logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
             </div>
-
+                
             <h1 class="hero-title fade-in delay-1">
                 EcoProgramadores<br>
                 <span class="highlight">STEAM MUTIS</span>
-            </h1>
+            </h1> 
 
             <p class="hero-description fade-in delay-2" >
                 Somos un grupo de estudiantes del Colegio Celestino Mutis, liderados por una profesora,
@@ -90,7 +93,7 @@
                 y matemáticas para un futuro sostenible.
             </p>
 
-            <button class="cta-button fade-in delay-3" onclick="scrollToSection('projects')">
+            <button class="cta-button fade-in delay-3" onclick="scrollToSection('gallery')">
                 <span>Explorar Proyectos</span>
 
             </button>
@@ -119,44 +122,44 @@
             <div class="carousel-container">
                 <div class="carousel-wrapper">
                     <div class="carousel-track" id="carouselTrack">
-                        <!-- Proyecto 1 -->
+                        <!-- Proyecto 1: Punto Ecológico Inteligente -->
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1668097613572-40b7c11c8727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200"
-                                alt="Sistema de Riego Inteligente" class="carousel-image">
+                            <div class="carousel-image-placeholder" style="background: linear-gradient(135deg, #006400, #00C8E6);">
+                                <span class="carousel-placeholder-icon">♻️</span>
+                            </div>
                             <div class="carousel-overlay">
                                 <div class="carousel-content">
-                                    <span class="carousel-badge">Diciembre 2025</span>
-                                    <h3 class="carousel-title">Sistema de Riego Inteligente</h3>
-                                    <p class="carousel-description">Proyecto de IoT para optimizar el uso de agua en
-                                        jardines escolares usando sensores de humedad y Arduino.</p>
+                                    <span class="carousel-badge">2025</span>
+                                    <h3 class="carousel-title">Punto Ecológico Inteligente</h3>
+                                    <p class="carousel-description">Prototipo de contenedor inteligente con tecnología IoT para optimizar el reciclaje en el colegio.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Proyecto 2 -->
+                        <!-- Proyecto 2: Juego de Clasificación -->
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1645520718652-9342896b0eec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200"
-                                alt="App de Reciclaje Escolar" class="carousel-image">
+                            <div class="carousel-image-placeholder" style="background: linear-gradient(135deg, #003727, #00F771);">
+                                <span class="carousel-placeholder-icon">🎮</span>
+                            </div>
                             <div class="carousel-overlay">
                                 <div class="carousel-content">
-                                    <span class="carousel-badge">Noviembre 2025</span>
-                                    <h3 class="carousel-title">App de Reciclaje Escolar</h3>
-                                    <p class="carousel-description">Aplicación móvil educativa para promover el
-                                        reciclaje, clasificar residuos y gamificar la sostenibilidad.</p>
+                                    <span class="carousel-badge">2025</span>
+                                    <h3 class="carousel-title">Juego de Clasificación</h3>
+                                    <p class="carousel-description">Juego interactivo en Scratch para aprender a clasificar residuos y promover el reciclaje.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Proyecto 3 -->
+                        <!-- Proyecto 3: Animación Digital -->
                         <div class="carousel-slide">
-                            <img src="https://images.unsplash.com/photo-1723730741647-caaea47ac90f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200"
-                                alt="Robot Recolector Solar" class="carousel-image">
+                            <div class="carousel-image-placeholder" style="background: linear-gradient(135deg, #00C8E6, #40E0D0);">
+                                <span class="carousel-placeholder-icon">🎬</span>
+                            </div>
                             <div class="carousel-overlay">
                                 <div class="carousel-content">
-                                    <span class="carousel-badge">Octubre 2025</span>
-                                    <h3 class="carousel-title">Robot Recolector</h3>
-                                    <p class="carousel-description">Prototipo de robot autónomo con paneles solares para
-                                        recolectar basura en áreas verdes del colegio.</p>
+                                    <span class="carousel-badge">2025</span>
+                                    <h3 class="carousel-title">Animación de Sensibilización</h3>
+                                    <p class="carousel-description">Videos animados sobre ecología y cuidado del medio ambiente para crear conciencia.</p>
                                 </div>
                             </div>
                         </div>
@@ -232,11 +235,10 @@
                             conocimientos técnicos con valores de sostenibilidad. Su dedicación nos inspira a
                             superar desafíos y crear proyectos con impacto real.
                         </p>
-                        <!-- Placeholder para foto de la profesora -->
+                        <!-- Foto de la profesora -->
                         <div class="teacher-placeholder">
                             <div class="teacher-photo-placeholder">
-                                <img src="img-lider-integrantes/profesora-lider.jpg" alt="Profesora líder"
-                                    style="width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #00C8E6;">
+                                <img src="img-lider-integrantes/profesora-lider.jpg" alt="Profesora Nathalie Rosales">
                             </div>
                             <div>
                                 <p class="teacher-name">Profesora Líder</p>
@@ -300,7 +302,7 @@
             </div>
 
             <!-- TEAM SECTION -->
-            <section class="team-section">
+            <section id="Team" class="team-section">
                 <h2 class="team-title">Nuestro Equipo</h2>
                 <p class="team-description">
                     Somos un grupo de estudiantes apasionados por la tecnología y la sostenibilidad.
@@ -314,7 +316,7 @@
                             <img src="img-lider-integrantes/Stiven-1.png"
                                 alt="Stiven Urrego - Desarrollador de software">
                         </div>
-                        <p class="team-member-name">🛠️Stiven Urrego🔧 <!--<span class="member-grade">Grado 11</span>--></p>
+                        <p class="team-member-name">🛠️Stiven Urrego🔧 <!--<span class="member-grade">Grado 11</span>--> </p>
                         <p class="team-member-label">Desarrollador de software💻<br>Integrante 1  </p>
                     </div>
 
@@ -360,9 +362,9 @@
                         <!-- Integrante 6 - Sofía -->
                         <div class="team-member">
                             <div class="team-photo-placeholder">
-                                <img src="img-lider-integrantes/Sofia.jpg" alt="Sofía Villagas - Diseñadora">
+                                <img src="img-lider-integrantes/Sofia.jpg" alt="Valery Villagas - Diseñadora">
                             </div>
-                            <p class="team-member-name">Sofia Villagas</p>
+                            <p class="team-member-name">Valery Villagas</p>
                             <p class="team-member-label">Diseñadora <br>Integrante 6</p>
                         </div>
 
@@ -432,38 +434,114 @@
     </section>
 
     <!-- ============================================
-        SECTION: PROYECTOS
-        INSTRUCCIONES: Para agregar proyectos, busca el array "projects" en script.js
+        SECTION: GALERÍA DE PROYECTOS
+        (Nueva sección para mostrar los proyectos del equipo)
     ============================================ -->
-    <section id="projects" class="projects-section">
+    <section id="gallery" class="gallery-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title dark">Nuestros Proyectos</h2>
-                <p class="section-subtitle dark">Una colección de proyectos innovadores que combinan tecnología,
-                    programación y sostenibilidad</p>
+                <h2 class="section-title dark">Galería de Proyectos</h2>
+                <p class="section-subtitle dark">Explora nuestros trabajos y creaciones</p>
             </div>
 
-            <!-- Projects Grid - Se generará dinámicamente con JavaScript -->
-            <div class="projects-grid" id="projectsGrid"></div>
+            <div class="gallery-grid">
+                <!-- Proyecto 1: Animación Digital -->
+                <a href="proyecto-animacion.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🎬</div>
+                        <h3 class="gallery-title">Animación Digital</h3>
+                        <p class="gallery-description">Videos de sensibilización sobre temas ambientales</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Animación</span>
+                            <span class="gallery-tag">Sensibilización</span>
+                        </div>
+                    </div>
+                </a>
 
-            <!-- Add Project CTA -->
-            <!-- <div class="add-project-cta">
-                <h3 class="cta-title">¿Tienes un nuevo proyecto?</h3>
-                <p class="cta-text">
-                    Para agregar más proyectos, edita el archivo <code>script.js</code> y busca el array
-                    <code>projects</code>. Es fácil y rápido.
-                </p>
-                <div class="cta-tip">
-                    <p>💡 <strong>Tip:</strong> Abre script.js y busca el array <code>projects</code> para añadir nuevos
-                        proyectos</p>
-                </div>
-            </div> -->
+                <!-- Proyecto 2: Juego de Residuos -->
+                <a href="proyecto-juego.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🎮</div>
+                        <h3 class="gallery-title">Juego de Clasificación</h3>
+                        <p class="gallery-description">Juego interactivo para aprender a reciclar</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Scratch</span>
+                            <span class="gallery-tag">Educativo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 3: Podcast -->
+                <a href="proyecto-podcast.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🎙️</div>
+                        <h3 class="gallery-title">EcoVoces</h3>
+                        <p class="gallery-description">Podcast sobre ecología y medio ambiente</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Audio</span>
+                            <span class="gallery-tag">Podcast</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 4: Prototipo Punto Ecológico -->
+                <a href="proyecto-prototipo.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">♻️</div>
+                        <h3 class="gallery-title">Prototipo Punto Ecológico</h3>
+                        <p class="gallery-description">Prototipo de contenedor inteligente para reciclaje</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">IoT</span>
+                            <span class="gallery-tag">Prototipo</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 5: Diseño 2D -->
+                <a href="proyecto-diseno.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">📐</div>
+                        <h3 class="gallery-title">Diseño del Prototipo</h3>
+                        <p class="gallery-description">Bocetos y diseño en 2D del punto ecológico</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Diseño</span>
+                            <span class="gallery-tag">2D</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 6: Video Presentación -->
+                <a href="proyecto-presentacion.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">📹</div>
+                        <h3 class="gallery-title">Video de Presentación</h3>
+                        <p class="gallery-description">Conoce nuestro equipo y proyecto</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Video</span>
+                            <span class="gallery-tag">Presentación</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 7: Video Educativo -->
+                <a href="proyecto-educativo.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">👶</div>
+                        <h3 class="gallery-title">Video Educativo</h3>
+                        <p class="gallery-description">Contenido educativo para los más pequeños</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Educativo</span>
+                            <span class="gallery-tag">Infantil</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- ============================================
-         SECTION: CONTACTO
-         ============================================ -->
+        SECTION: CONTACTO
+    ============================================ -->
     <section id="contact" class="contact-section">
         <!-- Animated background -->
         <div class="contact-bg-animation">
@@ -679,7 +757,7 @@
                 <div class="footer-right">
                     <a href="#home" class="footer-link">Inicio</a>
                     <a href="#about" class="footer-link">Nosotros</a>
-                    <a href="#projects" class="footer-link">Proyectos</a>
+                    <a href="#gallery" class="footer-link">Galería</a>
                 </div>
             </div>
 
@@ -693,6 +771,29 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+
+
+    <!-- <script type="module">
+        // Importamos la misma librería de tu ejemplo
+        import { animate, stagger, splitText } from 'https://esm.sh/animejs';
+
+        // 1. Dividimos el texto del título en letras (chars) automáticamente
+        const { chars } = splitText('.hero-title', { words: false, chars: true });
+
+        // 2. Ejecutamos la animación de salto
+        animate(chars, {
+            // Movimiento vertical (Y)
+            y: [
+                { to: '-2.5rem', ease: 'outExpo', duration: 600 }, // Sube rápido
+                { to: 0, ease: 'outBounce', duration: 1000, delay: 100 } // Cae con rebote
+            ],
+            // Parámetros de la ola
+            delay: stagger(60), // Crea el efecto de ola (60ms entre cada letra)
+            loop: true,         // Se repite infinitamente
+            loopDelay: 2000     // Espera 2 segundos antes de volver a saltar
+        });
+    </script> -->
+
 </body>
 
 </html>
