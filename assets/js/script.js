@@ -82,7 +82,7 @@ if (mobileMenuBtn && mobileMenu) {
 // ============================================
 
 let currentSlide = 0;
-const totalSlides = 3;
+const totalSlides = 3; // Actualizado: Punto Ecológico, Planta Filamento, Colector PET
 let autoPlayInterval;
 
 function initCarousel() {
@@ -301,8 +301,8 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
-    // Observar secciones
-    const sections = document.querySelectorAll('.section-header, .about-grid, .features-grid, .projects-grid, .contact-grid');
+    // Observar secciones principales
+    const sections = document.querySelectorAll('.section-header, .about-grid, .features-grid, .projects-grid, .contact-grid, .phase-block, .lab-card');
     sections.forEach(section => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
@@ -311,7 +311,7 @@ function initScrollAnimations() {
     });
     
     // Observar cards individuales con delay
-    const cards = document.querySelectorAll('.feature-card, .project-card');
+    const cards = document.querySelectorAll('.feature-card, .project-card, .phase-card, .lab-card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';

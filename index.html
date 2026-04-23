@@ -17,7 +17,7 @@
         rel="stylesheet">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
@@ -32,7 +32,7 @@
                 <!-- LOGO PLACEHOLDER - Reemplaza este div con tu logo real -->
                 <div class="logo-section">
                     <div class="logo-circle">
-                        <img src="logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
+                        <img src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
                     </div>
                     <span class="logo-text">EcoProgramadores</span>
                 </div>
@@ -43,6 +43,8 @@
                     <a href="#about" class="nav-link">Quiénes Somos</a>
                     <a href="#Team" class="nav-link">Equipo</a>
                     <a href="#gallery" class="nav-link">Galería</a>
+                    <a href="#fases-proyecto" class="nav-link">Fases</a>
+                    <a href="#lab-steam" class="nav-link">Lab STEAM</a>
                     <a href="#contact" class="nav-link-button">Contacto</a>
                 </div>
 
@@ -51,7 +53,7 @@
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
-                    
+
                 </button>
             </div>
 
@@ -61,6 +63,8 @@
                 <a href="#about" class="mobile-nav-link">Quiénes Somos</a>
                 <a href="#Team" class="mobile-nav-link">Equipo</a>
                 <a href="#gallery" class="mobile-nav-link">Galería</a>
+                <a href="#fases-proyecto" class="mobile-nav-link">Fases</a>
+                <a href="#lab-steam" class="mobile-nav-link">Lab STEAM</a>
                 <a href="#contact" class="mobile-nav-link">Contacto</a>
             </div>
         </nav>
@@ -79,18 +83,19 @@
         <div class="container hero-content">
             <!-- LOGO HERO PLACEHOLDER - Reemplaza este div con tu logo grande -->
             <div class="logo-circle hero-logo">
-                <img src="logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
+                <img src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
             </div>
-                
+
             <h1 class="hero-title fade-in delay-1">
                 EcoProgramadores<br>
                 <span class="highlight">STEAM MUTIS</span>
-            </h1> 
+            </h1>
 
-            <p class="hero-description fade-in delay-2" >
-                Somos un grupo de estudiantes del Colegio Celestino Mutis, liderados por una profesora,
-                parte de STEAM Education. Creamos proyectos innovadores en ecología, programación, arte
-                y matemáticas para un futuro sostenible.
+            <p class="hero-description fade-in delay-2">
+                En 2026, evolucionamos de prototipos iniciales hacia la <strong>manufactura circular</strong> y el
+                desarrollo de sistemas de recolección con incentivos inteligentes. Somos un centro de innovación del
+                Colegio Celestino Mutis impulsando la <strong>Transferencia Tecnológica</strong> y el <strong>Impacto en
+                    la Economía Circular</strong>.
             </p>
 
             <button class="cta-button fade-in delay-3" onclick="scrollToSection('gallery')">
@@ -122,44 +127,50 @@
             <div class="carousel-container">
                 <div class="carousel-wrapper">
                     <div class="carousel-track" id="carouselTrack">
-                        <!-- Proyecto 1: Punto Ecológico Inteligente -->
+                        <!-- Proyecto 1: Punto Ecológico Inteligente (Fase 2) -->
                         <div class="carousel-slide">
-                            <div class="carousel-image-placeholder" style="background: linear-gradient(135deg, #006400, #00C8E6);">
+                            <div class="carousel-image-placeholder"
+                                style="background: linear-gradient(135deg, #006400, #00C8E6);">
                                 <span class="carousel-placeholder-icon">♻️</span>
                             </div>
                             <div class="carousel-overlay">
                                 <div class="carousel-content">
-                                    <span class="carousel-badge">2025</span>
+                                    <span class="carousel-badge">2026</span>
                                     <h3 class="carousel-title">Punto Ecológico Inteligente</h3>
-                                    <p class="carousel-description">Prototipo de contenedor inteligente con tecnología IoT para optimizar el reciclaje en el colegio.</p>
+                                    <p class="carousel-description">Implementación final en áreas comunes con sensores
+                                        IoT y datos del Observatorio OVAIRE.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Proyecto 2: Juego de Clasificación -->
+                        <!-- Proyecto 2: Planta de Filamento PET (Joya de la corona) -->
                         <div class="carousel-slide">
-                            <div class="carousel-image-placeholder" style="background: linear-gradient(135deg, #003727, #00F771);">
-                                <span class="carousel-placeholder-icon">🎮</span>
+                            <div class="carousel-image-placeholder"
+                                style="background: linear-gradient(135deg, #FF8C00, #FFD700);">
+                                <span class="carousel-placeholder-icon">🏭</span>
                             </div>
                             <div class="carousel-overlay">
                                 <div class="carousel-content">
-                                    <span class="carousel-badge">2025</span>
-                                    <h3 class="carousel-title">Juego de Clasificación</h3>
-                                    <p class="carousel-description">Juego interactivo en Scratch para aprender a clasificar residuos y promover el reciclaje.</p>
+                                    <span class="carousel-badge">2026</span>
+                                    <h3 class="carousel-title">Planta de Filamento PET</h3>
+                                    <p class="carousel-description">Construcción de máquina extrusora para fabricar
+                                        filamento de impresión 3D a partir de botellas.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Proyecto 3: Animación Digital -->
+                        <!-- Proyecto 3: Colector PET con Incentivos -->
                         <div class="carousel-slide">
-                            <div class="carousel-image-placeholder" style="background: linear-gradient(135deg, #00C8E6, #40E0D0);">
-                                <span class="carousel-placeholder-icon">🎬</span>
+                            <div class="carousel-image-placeholder"
+                                style="background: linear-gradient(135deg, #8A2BE2, #4B0082);">
+                                <span class="carousel-placeholder-icon">💰</span>
                             </div>
                             <div class="carousel-overlay">
                                 <div class="carousel-content">
-                                    <span class="carousel-badge">2025</span>
-                                    <h3 class="carousel-title">Animación de Sensibilización</h3>
-                                    <p class="carousel-description">Videos animados sobre ecología y cuidado del medio ambiente para crear conciencia.</p>
+                                    <span class="carousel-badge">2026</span>
+                                    <h3 class="carousel-title">Colector PET con Incentivos</h3>
+                                    <p class="carousel-description">Nuevo prototipo que entrega recompensas
+                                        (monedas/bonos) por reciclaje.</p>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +210,8 @@
             <div class="about-grid">
                 <!-- Left: Image -->
                 <div class="about-image-container">
-                    <img src="img-lider-integrantes/Equipo-de-trabajo.jpg" alt="Equipo EcoProgramadores trabajando" class="about-image">
+                    <img src="assets/img/equipo/Equipo-de-trabajo.jpg" alt="Equipo EcoProgramadores trabajando"
+                        class="about-image">
                     <div class="about-image-overlay"></div>
                     <!-- Placeholder para foto del equipo -->
                     <div class="about-image-label">
@@ -212,19 +224,19 @@
                     <div class="about-card card-historia">
                         <h3 class="about-card-title">Nuestra Historia</h3>
                         <p class="about-card-text">
-                            Nacimos en 2025 con una iniciativa del programa STEAM Education del Colegio Celestino
-                            Mutis.
-                            Bajo la guía de nuestra profesora líder, hemos desarrollado múltiples proyectos que fusionan
-                            tecnología, programación y ecología para crear soluciones innovadoras.
+                            Nacimos en 2025 y en 2026 evolucionamos hacia la manufactura circular. Somos un centro de
+                            innovación y tecnología dentro del Colegio Celestino Mutis, fusionando ciencia, tecnología y
+                            ecología para crear soluciones con <strong>Sostenibilidad Institucional</strong>.
                         </p>
                     </div>
 
                     <div class="about-card card-mision">
-                        <h3 class="about-card-title">Nuestra Misión</h3>
+                        <h3 class="about-card-title">Ciencia Ciudadana y OVAIRE</h3>
                         <p class="about-card-text">
-                            Promover la educación STEAM con enfoque ecológico e innovación sostenible, empoderando
-                            a jóvenes para que desarrollen soluciones tecnológicas que contribuyan a un futuro más verde
-                            y sustentable para todos.
+                            Integramos el <strong>Observatorio de Vigilancia Ambiental (OVAIRE)</strong> a nuestros
+                            desarrollos. Nuestra tecnología se basa en datos reales del territorio, aplicando
+                            metodologías STEAM para el desarrollo de sistemas de recolección inteligente y
+                            <strong>Transferencia Tecnológica</strong> en el colegio.
                         </p>
                     </div>
 
@@ -238,7 +250,7 @@
                         <!-- Foto de la profesora -->
                         <div class="teacher-placeholder">
                             <div class="teacher-photo-placeholder">
-                                <img src="img-lider-integrantes/profesora-lider.jpg" alt="Profesora Nathalie Rosales">
+                                <img src="assets/img/equipo/profesora-lider.jpg" alt="Profesora Nathalie Rosales">
                             </div>
                             <div>
                                 <p class="teacher-name">Profesora Líder</p>
@@ -313,17 +325,17 @@
                     <!-- Integrante 1 - Stiven -->
                     <div class="team-member">
                         <div class="team-photo-placeholder stiven">
-                            <img src="img-lider-integrantes/Stiven-1.png"
-                                alt="Stiven Urrego - Desarrollador de software">
+                            <img src="assets/img/equipo/Stiven-1.png" alt="Stiven Urrego - Desarrollador de software">
                         </div>
-                        <p class="team-member-name">🛠️Stiven Urrego🔧 <!--<span class="member-grade">Grado 11</span>--> </p>
-                        <p class="team-member-label">Desarrollador de software💻<br>Integrante 1  </p>
+                        <p class="team-member-name">🛠️Stiven Urrego🔧 <!--<span class="member-grade">Grado 11</span>-->
+                        </p>
+                        <p class="team-member-label">Desarrollador de software💻<br>Integrante 1 </p>
                     </div>
 
                     <!-- Integrante 2 - Isa -->
                     <div class="team-member">
                         <div class="team-photo-placeholder isa">
-                            <img src="img-lider-integrantes/Isa-2.jpg" alt="Isa Quintero - Desarrolladora">
+                            <img src="assets/img/equipo/Isa-2.jpg" alt="Isa Quintero - Desarrolladora">
                         </div>
                         <p class="team-member-name">★Isabella Quevedo★</p>
                         <p class="team-member-label">Divulgadora y desarrolladora de prototipos <br>Integrante 2</p>
@@ -331,8 +343,8 @@
 
                     <!-- Integrante 3 - Mariana -->
                     <div class="team-member">
-                        <div class="team-photo-placeholder Mariana"> 
-                            <img src="img-lider-integrantes/Mariana.jpg"
+                        <div class="team-photo-placeholder Mariana">
+                            <img src="assets/img/equipo/Mariana.jpg"
                                 alt="Mariana Acosta - Divulgadora y desarrolladora de prototipos">
                         </div>
                         <p class="team-member-name">Mariana Acosta🥰</p>
@@ -342,7 +354,7 @@
                     <!-- Integrante 4 - Denisse -->
                     <div class="team-member">
                         <div class="team-photo-placeholder denisse">
-                            <img src="img-lider-integrantes/Denisse.jpg" alt="Denisse Rodríguez - Programadora">
+                            <img src="assets/img/equipo/Denisse.jpg" alt="Denisse Rodríguez - Programadora">
                         </div>
                         <p class="team-member-name">Denisse Rodríguez🌺</p>
                         <p class="team-member-label">Programadora de codigo <br>Integrante 4</p>
@@ -353,7 +365,7 @@
                         <!-- Integrante 5 - Kevin -->
                         <div class="team-member">
                             <div class="team-photo-placeholder kevin">
-                                <img src="img-lider-integrantes/Kevin.jpg" alt="Kevin Montoya - Integrante">
+                                <img src="assets/img/equipo/Kevin.jpg" alt="Kevin Montoya - Integrante">
                             </div>
                             <p class="team-member-name">Kevin Montoya</p>
                             <p class="team-member-label">Ayudante de creador de videojuegos <br>Integrante 5</p>
@@ -362,16 +374,17 @@
                         <!-- Integrante 6 - Sofía -->
                         <div class="team-member">
                             <div class="team-photo-placeholder">
-                                <img src="img-lider-integrantes/Sofia.jpg" alt="Valery Villagas - Diseñadora">
+                                <img src="assets/img/equipo/Sofia.jpg" alt="Valery Villagas - Diseñadora">
                             </div>
-                            <p class="team-member-name">Valery Villagas</p>
+                            <p class="team-member-name">Sofia Villagas</p>
                             <p class="team-member-label">Diseñadora <br>Integrante 6</p>
                         </div>
 
                         <!-- Integrante 7 - Karel -->
                         <div class="team-member">
                             <div class="team-photo-placeholder karel">
-                                <img src="img-lider-integrantes/Karel.jpg" alt="Karel Gonzales - Desarrollador de videojuegos">
+                                <img src="assets/img/equipo/Karel.jpg"
+                                    alt="Karel Gonzales - Desarrollador de videojuegos">
                             </div>
                             <p class="team-member-name">Karel Gonzales</p>
                             <p class="team-member-label">Desarrollador de videojuegos <br>Integrante 7</p>
@@ -379,20 +392,20 @@
 
                         <!-- Integrante 8 - Placeholder -->
                         <div class="team-member">
-                            <div class="team-photo-placeholder new-member">
-                                <span class="member-placeholder-text">+</span>
+                            <div class="team-photo-placeholder Cristian">
+                                <img src="assets/img/equipo/Cristian.jpg" alt="Cristian">
                             </div>
-                            <p class="team-member-name">Nuevo Integrante</p>
-                            <p class="team-member-label">Pendiente de foto<br>Integrante 8</p>
+                            <p class="team-member-name">Cristian sanpedro</p>
+                            <p class="team-member-label">Pendiente de rol<br>Integrante 8</p>
                         </div>
 
                         <!-- Integrante 9 - Placeholder -->
                         <div class="team-member">
-                            <div class="team-photo-placeholder new-member">
-                                <span class="member-placeholder-text">+</span>
+                            <div class="team-photo-placeholder Nikol">
+                                <img src="assets/img/equipo/Nikol.jpg" alt="Nikol Villa">
                             </div>
-                            <p class="team-member-name">Nuevo Integrante</p>
-                            <p class="team-member-label">Pendiente de foto<br>Integrante 9</p>
+                            <p class="team-member-name">Nikol Villa</p>
+                            <p class="team-member-label">Pendiente de rol<br>Integrante 9</p>
                         </div>
 
                         <!-- Integrante 10 - Placeholder -->
@@ -445,46 +458,20 @@
             </div>
 
             <div class="gallery-grid">
-                <!-- Proyecto 1: Animación Digital -->
-                <a href="proyecto-animacion.html" class="gallery-card-link">
+                <!-- Proyecto 1: Video Presentación -->
+                <a href="proyecto-presentacion.html" class="gallery-card-link">
                     <div class="gallery-card">
-                        <div class="gallery-icon">🎬</div>
-                        <h3 class="gallery-title">Animación Digital</h3>
-                        <p class="gallery-description">Videos de sensibilización sobre temas ambientales</p>
+                        <div class="gallery-icon">📹</div>
+                        <h3 class="gallery-title">Video de Presentación</h3>
+                        <p class="gallery-description">Conoce nuestro equipo y proyecto</p>
                         <div class="gallery-tags">
-                            <span class="gallery-tag">Animación</span>
-                            <span class="gallery-tag">Sensibilización</span>
+                            <span class="gallery-tag">Video</span>
+                            <span class="gallery-tag">Presentación</span>
                         </div>
                     </div>
                 </a>
 
-                <!-- Proyecto 2: Juego de Residuos -->
-                <a href="proyecto-juego.html" class="gallery-card-link">
-                    <div class="gallery-card">
-                        <div class="gallery-icon">🎮</div>
-                        <h3 class="gallery-title">Juego de Clasificación</h3>
-                        <p class="gallery-description">Juego interactivo para aprender a reciclar</p>
-                        <div class="gallery-tags">
-                            <span class="gallery-tag">Scratch</span>
-                            <span class="gallery-tag">Educativo</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Proyecto 3: Podcast -->
-                <a href="proyecto-podcast.html" class="gallery-card-link">
-                    <div class="gallery-card">
-                        <div class="gallery-icon">🎙️</div>
-                        <h3 class="gallery-title">EcoVoces</h3>
-                        <p class="gallery-description">Podcast sobre ecología y medio ambiente</p>
-                        <div class="gallery-tags">
-                            <span class="gallery-tag">Audio</span>
-                            <span class="gallery-tag">Podcast</span>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Proyecto 4: Prototipo Punto Ecológico -->
+                <!-- Proyecto 2: Prototipo Punto Ecológico -->
                 <a href="proyecto-prototipo.html" class="gallery-card-link">
                     <div class="gallery-card">
                         <div class="gallery-icon">♻️</div>
@@ -497,7 +484,8 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 5: Diseño 2D -->
+
+                <!-- Proyecto 3: Diseño 2D -->
                 <a href="proyecto-diseno.html" class="gallery-card-link">
                     <div class="gallery-card">
                         <div class="gallery-icon">📐</div>
@@ -510,15 +498,44 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 6: Video Presentación -->
-                <a href="proyecto-presentacion.html" class="gallery-card-link">
+
+                <!-- Proyecto 4: Podcast -->
+                <a href="proyecto-podcast.html" class="gallery-card-link">
                     <div class="gallery-card">
-                        <div class="gallery-icon">📹</div>
-                        <h3 class="gallery-title">Video de Presentación</h3>
-                        <p class="gallery-description">Conoce nuestro equipo y proyecto</p>
+                        <div class="gallery-icon">🎙️</div>
+                        <h3 class="gallery-title">EcoVoces</h3>
+                        <p class="gallery-description">Podcast sobre ecología y medio ambiente</p>
                         <div class="gallery-tags">
-                            <span class="gallery-tag">Video</span>
-                            <span class="gallery-tag">Presentación</span>
+                            <span class="gallery-tag">Audio</span>
+                            <span class="gallery-tag">Podcast</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 5: Juego de Residuos -->
+                <a href="proyecto-juego.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🎮</div>
+                        <h3 class="gallery-title">Juego de Clasificación</h3>
+                        <p class="gallery-description">Juego interactivo para aprender a reciclar</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Scratch</span>
+                            <span class="gallery-tag">Educativo</span>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <!-- Proyecto 6: Animación Digital -->
+                <a href="proyecto-animacion.html" class="gallery-card-link">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🎬</div>
+                        <h3 class="gallery-title">Animación Digital</h3>
+                        <p class="gallery-description">Videos de sensibilización sobre temas ambientales</p>
+                        <div class="gallery-tags">
+                            <span class="gallery-tag">Animación</span>
+                            <span class="gallery-tag">Sensibilización</span>
                         </div>
                     </div>
                 </a>
@@ -535,6 +552,97 @@
                         </div>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+        SECTION: FASES DEL PROYECTO 
+        (Debajo de Galería)
+    ============================================ -->
+    <section id="fases-proyecto" class="phases-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title dark">Nuestras Fases: De Prototipos a Manufactura</h2>
+                <p class="section-subtitle dark">Un resumen de nuestro progreso y la visión para 2026</p>
+            </div>
+
+            <!-- Fase 1: Logros Anteriores -->
+            <div class="phase-block phase-1">
+                <h3 class="phase-title">📌 Fase 1: Cimientos y Prototipos (2025)</h3>
+                <div class="phase-grid">
+                    <div class="phase-card">
+                        <div class="phase-icon">🎮</div>
+                        <h4>Videojuegos Educativos</h4>
+                        <p>Desarrollo de juegos interactivos en Scratch para la clasificación de residuos.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-icon">🎙️</div>
+                        <h4>Podcast EcoVoces</h4>
+                        <p>Primera temporada con contenido educativo sobre ecología y sostenibilidad.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-icon">⚙️</div>
+                        <h4>Prototipado Inicial</h4>
+                        <p>Creación de los primeros modelos del Punto Ecológico Inteligente con IoT.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 2: El Futuro 2026 -->
+            <div class="phase-block phase-2">
+                <h3 class="phase-title">🚀 Fase 2: Escalamiento e Innovación (2026)</h3>
+                <div class="phase-grid">
+                    <div class="phase-card featured">
+                        <div class="phase-icon">🏭</div>
+                        <h4>Planta de Filamento PET</h4>
+                        <p>Máquina extrusora para fabricar filamento 3D a partir de botellas PET recicladas.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-icon">💰</div>
+                        <h4>Colector PET con Incentivos</h4>
+                        <p>Sistema de recompensas gamificado para incentivar el reciclaje en la comunidad.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-icon">🔬</div>
+                        <h4>Observatorio OVAIRE</h4>
+                        <p>Integración de ciencia ciudadana y datos reales en nuestras tecnologías.</p>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-icon">🎨</div>
+                        <h4>Laboratorio STEAM</h4>
+                        <p>Transformación del aula con mural creativo y conectividad IoT de alta velocidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+        SECTION: NUESTRO LABORATORIO STEAM
+    ============================================ -->
+    <section id="lab-steam" class="lab-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title light">Nuestro Laboratorio STEAM</h2>
+                <p class="section-subtitle light">La infraestructura que impulsa nuestra innovación y creatividad</p>
+            </div>
+            <div class="lab-grid">
+                <div class="lab-card">
+                    <div class="lab-icon">🎨</div>
+                    <h4>Transformación del Aula</h4>
+                    <p>Nuestro mural creativo no solo embellece el espacio, sino que justifica la necesidad de materiales de arte y mobiliario colaborativo para el trabajo en equipo.</p>
+                </div>
+                <div class="lab-card">
+                    <div class="lab-icon">📡</div>
+                    <h4>Conectividad e IoT</h4>
+                    <p>Red Wi-Fi de alta velocidad que permite conectar nuestros prototipos a la nube y monitoreo en tiempo real del Observatorio OVAIRE.</p>
+                </div>
+                <div class="lab-card">
+                    <div class="lab-icon">💡</div>
+                    <h4>Espacio de Innovación</h4>
+                    <p>Centro dedicado a la investigación, desarrollo de prototipos y experimentación con tecnologías sostenibles y ecosistemas circular.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -592,7 +700,7 @@
                             <span>Enviar Mensaje</span>
                         </button>
 
-                        
+
                     </form>
                 </div>
 
@@ -649,7 +757,7 @@
                             <div>
                                 <h4 class="contact-item-title">Teléfono</h4>
                                 <p class="contact-item-text">
-                                    +57 (XXX) XXX-XXXX<br>
+                                    +57 <br>
                                     <span class="contact-note"></span>
                                 </p>
                             </div>
@@ -770,7 +878,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 
     <!-- <script type="module">
