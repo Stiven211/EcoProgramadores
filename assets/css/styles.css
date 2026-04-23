@@ -1028,7 +1028,7 @@ button {
     --main-color: #FFFFFF; --pulse-color: rgba(255,255,255,0.4); 
     --pulse-glow: rgba(255,255,255,0.2); --bright-color: #f0f0f0; 
 }
-.kevin   { 
+.kevin   {
     --main-color: #00C8E6; --pulse-color: rgba(0,200,230,0.5); 
     --pulse-glow: rgba(0,200,230,0.3); --bright-color: #55eaff; 
 }
@@ -1036,6 +1036,15 @@ button {
     --main-color: #ff9100; --pulse-color: rgba(255,145,0,0.5); 
     --pulse-glow: rgba(255,145,0,0.3); --bright-color: #ffb74d; 
 }
+.Cristian { 
+    --main-color: #0d1b3d; --pulse-color: rgba(13,27,61,0.6); 
+    --pulse-glow: rgba(13,27,61,0.3); --bright-color: #1e3a6e; 
+}
+.Nikol{
+    --main-color: #FF00FF; --pulse-color: rgba(255, 0, 255, 0.6);
+    --pulse-glow: rgba(255, 0, 255, 0.3); --bright-color: #ff66ff;
+}
+
 
 
 
@@ -1930,7 +1939,7 @@ a.gallery-card-link .gallery-card:hover {
 }
 
 /* ============================================
-   RESPONSIVE AJUSTES ADICIONALES
+    RESPONSIVE AJUSTES ADICIONALES
    ============================================ */
 @media (max-width: 640px) {
     .section-title {
@@ -1943,6 +1952,18 @@ a.gallery-card-link .gallery-card:hover {
 
     .about-image {
         height: 200px;
+    }
+
+    .phase-title {
+        font-size: 1.4rem;
+    }
+
+    .phase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1991,30 +2012,338 @@ a.gallery-card-link .gallery-card:hover {
     
     /* Combinación de ambas animaciones */
     /* levitacion: 3s, pulse-neon: 2s (tiempos diferentes para que no sea monótono) */
-    animation: 
+     animation: 
         levitacion 3s ease-in-out infinite,
         pulse-neon 2s ease-in-out infinite;
-    
-    /* Mejora el rendimiento de la animación */
-    will-change: transform, box-shadow;
+}
+/* ============================================
+    PHASES SECTION (Fase 1 y Fase 2)
+   ============================================ */
+.phases-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #115e30 0%, #003828 50%, #317f6b 100%);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Animación de movimiento vertical */
-@keyframes levitacion {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+.phases-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 200, 230, 0.08) 0%, transparent 70%);
+    animation: rotateBg 25s linear infinite;
+    pointer-events: none;
 }
 
-/* Animación de brillo neón */
-@keyframes pulse-neon {
-    0%, 100% {
-        box-shadow: 0 0 10px var(--color-accent-neon), 
-                    var(--shadow-xl); /* Mantiene tu sombra base */
-    }
-    50% {
-        box-shadow: 0 0 25px var(--color-accent-neon), 
-                    0 0 45px var(--color-accent-neon);
-    }
+@keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.phases-section .section-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+.phases-section .section-title.dark {
+    color: var(--color-primary-dark);
+    font-size: 2.5rem;
+}
+
+.phases-section .section-subtitle.dark {
+    color: var(--color-primary-medium);
+    font-size: 1.1rem;
+}
+
+.phase-block {
+    margin-bottom: 3rem;
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.phase-block:hover {
+    transform: translateY(-8px);
+}
+
+.phase-block.phase-1 {
+    background: linear-gradient(135deg, #ffffff 0%, #f8ffff 100%);
+    border-left: 6px solid var(--color-accent-turquoise);
+    box-shadow: 0 8px 25px rgba(0, 200, 230, 0.15);
+}
+
+.phase-block.phase-1:hover {
+    box-shadow: 0 15px 40px rgba(0, 200, 230, 0.25);
+}
+
+.phase-block.phase-2 {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-deep-green) 100%);
+    color: white;
+    border-left: 6px solid var(--color-accent-neon);
+    box-shadow: 0 10px 30px rgba(0, 247, 113, 0.25);
+}
+
+.phase-block.phase-2:hover {
+    box-shadow: 0 15px 40px rgba(0, 247, 113, 0.35);
+}
+
+.phase-title {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.phase-1 .phase-title {
+    color: var(--color-primary-dark);
+}
+
+.phase-2 .phase-title {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.phase-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f5ffff 100%);
+    padding: 2.2rem 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(0, 200, 230, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: relative;
+}
+
+.phase-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent-turquoise);
+    box-shadow: 0 18px 35px rgba(0, 200, 230, 0.2);
+}
+
+.phase-2 .phase-card {
+    background: linear-gradient(145deg, rgba(0, 75, 65, 0.95) 0%, rgba(0, 50, 40, 0.95) 100%);
+    backdrop-filter: blur(8px);
+    color: white;
+    border: 2px solid rgba(0, 247, 113, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.phase-2 .phase-card:hover {
+    border-color: var(--color-accent-neon);
+    box-shadow: 0 18px 35px rgba(0, 247, 113, 0.25);
+}
+
+.phase-card.featured {
+    border: 2px solid var(--color-accent-neon);
+    box-shadow: 0 0 30px rgba(0, 247, 113, 0.4);
+    position: relative;
+    overflow: hidden;
+        background: linear-gradient(145deg, rgba(0, 75, 65, 0.95) 0%, rgba(0, 50, 40, 0.95) 100%);
+    transform: scale(1.02);
+}
+
+.phase-card.featured:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 247, 113, 0.5);
+}
+
+.phase-card.featured::before {
+    content: '⭐';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.2rem;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.phase-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 200, 230, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.phase-card:hover .phase-icon {
+    transform: scale(1.15) rotate(8deg);
+}
+
+.phase-card h4 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    color: var(--color-primary-dark);
+    letter-spacing: 0.3px;
+}
+
+.phase-2 .phase-card h4 {
+    color: var(--color-accent-neon);
+    text-shadow: 0 0 8px rgba(0, 247, 113, 0.4);
+}
+
+.phase-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.phase-2 .phase-card p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+/* ============================================
+    LABORATORIO STEAM SECTION
+   ============================================ */
+/* ============================================
+    LABORATORIO STEAM SECTION
+   ============================================ */
+.lab-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #36826e 0%, #0f6859 50%, #004122 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Elementos flotantes de fondo */
+.lab-section::before,
+.lab-section::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.lab-section::before {
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 200, 230, 0.12);
+    top: 10%;
+    right: -100px;
+    animation: float1 8s ease-in-out infinite;
+}
+
+.lab-section::after {
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 247, 113, 0.12);
+    bottom: 10%;
+    left: -50px;
+    animation: float2 10s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -30px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-30px, 30px); }
+}
+
+.lab-section .section-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.lab-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 2.8rem 2.2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 200, 230, 0.4);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.lab-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 230, 0.15), transparent);
+    transition: left 0.7s ease;
+}
+
+.lab-card:hover::before {
+    left: 100%;
+}
+
+.lab-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    border-color: var(--color-accent-neon);
+    box-shadow: 0 20px 50px rgba(0, 247, 113, 0.3);
+}
+
+.lab-icon {
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: pulse-icon 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 247, 113, 0.3));
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+.lab-card h4 {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    background: linear-gradient(90deg, #00ffff, var(--color-accent-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.lab-card p {
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    will-change: color;
 }
 
 
