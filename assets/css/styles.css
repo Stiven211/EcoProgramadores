@@ -2406,9 +2406,7 @@ a.gallery-card-link:hover .gallery-card {
         line-height: 1.2;
     }
 
-    .hero-description {
-        font-size: 0.95rem !important;
-    }
+    
 
     .container {
         padding: 0 0.75rem !important;
@@ -2432,10 +2430,6 @@ a.gallery-card-link:hover .gallery-card {
 
     .about-card {
         padding: 1rem !important;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr !important;
     }
 
     .phase-card {
@@ -2548,12 +2542,12 @@ a.gallery-card-link:hover .gallery-card {
     }
 
     /* Mejorar botones en móvil */
-    .cta-button,
+    /* .cta-button,
     .contact-cta-button,
     .form-submit {
         padding: 0.75rem 1.5rem !important;
         font-size: 0.95rem !important;
-    }
+    } */
 
     /* Carrusel más compacto */
     .carousel-image {
@@ -2567,10 +2561,7 @@ a.gallery-card-link:hover .gallery-card {
         right: 0;
     }
 
-    .logo-circle {
-        width: 40px !important;
-        height: 40px !important;
-    }
+    
 }
 
 /* Pantallas ultra anchas (2000px+) */
