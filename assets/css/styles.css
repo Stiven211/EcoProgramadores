@@ -1197,32 +1197,42 @@ button {
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shadow-md);
-    border: 2px solid transparent;
+    border: 2px solid rgba(0, 200, 230, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 a.gallery-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
+    transition: all 0.3s ease;
 }
 
-a.gallery-card-link .gallery-card:hover {
-    transform: translateY(-5px);
+a.gallery-card-link:hover .gallery-card {
+    transform: translateY(-10px) scale(1.02);
     box-shadow: var(--shadow-xl);
-    border-color: var(--color-accent-turquoise);
+    border-color: var(--color-accent-neon);
+    background: rgba(255, 255, 255, 1);
 }
 
 .gallery-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-    border-color: var(--color-accent-turquoise);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 200, 230, 0.25);
+    border-color: var(--color-accent-neon);
+    background: rgba(255, 255, 255, 1);
 }
 
 .gallery-icon {
     font-size: 2.5rem;
     margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.gallery-card:hover .gallery-icon {
+    transform: scale(1.15) rotate(8deg);
 }
 
 .gallery-title {
@@ -1231,6 +1241,11 @@ a.gallery-card-link .gallery-card:hover {
     font-weight: 700;
     color: var(--color-primary-dark);
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.gallery-card:hover .gallery-title {
+    color: var(--color-accent-neon);
 }
 
 .gallery-description {
@@ -1254,6 +1269,13 @@ a.gallery-card-link .gallery-card:hover {
     font-weight: 600;
     padding: 0.25rem 0.6rem;
     border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.gallery-card:hover .gallery-tag {
+    background: var(--color-accent-neon);
+    transform: scale(1.05);
 }
 
 /* Gallery Card Expandable */
@@ -1349,7 +1371,8 @@ a.gallery-card-link .gallery-card:hover {
     }
     
     .gallery-card {
-        padding: 1rem;
+        padding: 1.25rem;
+        box-shadow: var(--shadow-sm);
     }
     
     .gallery-title {
@@ -1358,6 +1381,10 @@ a.gallery-card-link .gallery-card:hover {
     
     .gallery-description {
         font-size: 0.8rem;
+    }
+    
+    .gallery-icon {
+        font-size: 2rem;
     }
 }
 
@@ -1976,29 +2003,37 @@ a.gallery-card-link .gallery-card:hover {
     flex-shrink: 0;
 }
 
-/* .hero-logo {
-    width: 160px;
-    height: 160px;
-    border: 4px solid var(--color-accent-neon);
-    box-shadow: var(--shadow-xl);
-    margin: 0 auto 2rem;
-    animation: pulse-neon 2s infinite ease-in-out;
-    
+/* ============================================
+    ANIMACIÓN DEL LOGO HERO
+   ============================================ */
+@keyframes levitacion {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.02);
+    }
 }
+
 @keyframes pulse-neon {
     0% {
         box-shadow: 0 0 5px var(--color-accent-aqua), 
-                    0 0 10px var(--color-accent-aqua);
+                    0 0 10px var(--color-accent-aqua),
+                    inset 0 0 5px rgba(0, 247, 113, 0.2);
     }
     50% {
         box-shadow: 0 0 20px var(--color-accent-neon), 
-                    0 0 35px var(--color-accent-neon);
+                    0 0 35px var(--color-accent-neon),
+                    inset 0 0 10px rgba(0, 247, 113, 0.4);
     }
     100% {
         box-shadow: 0 0 5px var(--color-accent-neon), 
-                    0 0 10px var(--color-accent-neon);
+                    0 0 10px var(--color-accent-neon),
+                    inset 0 0 5px rgba(0, 247, 113, 0.2);
     }
-} */
+}
+
 .hero-logo {
     width: 160px;
     height: 160px;
@@ -2009,10 +2044,11 @@ a.gallery-card-link .gallery-card:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 10px var(--color-accent-neon);
     
     /* Combinación de ambas animaciones */
-    /* levitacion: 3s, pulse-neon: 2s (tiempos diferentes para que no sea monótono) */
-     animation: 
+    /* levitacion: 3s (flotación), pulse-neon: 2s (efecto brillo neon) */
+    animation: 
         levitacion 3s ease-in-out infinite,
         pulse-neon 2s ease-in-out infinite;
 }
@@ -2050,12 +2086,12 @@ a.gallery-card-link .gallery-card:hover {
 }
 
 .phases-section .section-title.dark {
-    color: var(--color-primary-dark);
+    color: #f1f1f1;
     font-size: 2.5rem;
 }
 
 .phases-section .section-subtitle.dark {
-    color: var(--color-primary-medium);
+    color: #90b190;
     font-size: 1.1rem;
 }
 
@@ -2074,7 +2110,7 @@ a.gallery-card-link .gallery-card:hover {
 }
 
 .phase-block.phase-1 {
-    background: linear-gradient(135deg, #ffffff 0%, #f8ffff 100%);
+    background: linear-gradient(135deg, #003929 0%, #00392987 100%);
     border-left: 6px solid var(--color-accent-turquoise);
     box-shadow: 0 8px 25px rgba(0, 200, 230, 0.15);
 }
@@ -2104,7 +2140,7 @@ a.gallery-card-link .gallery-card:hover {
 }
 
 .phase-1 .phase-title {
-    color: var(--color-primary-dark);
+    color: #ffffff
 }
 
 .phase-2 .phase-title {
@@ -2353,4 +2389,201 @@ a.gallery-card-link .gallery-card:hover {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+/* ============================================
+    RESPONSIVE MEJORADO - MÚLTIPLES BREAKPOINTS
+   ============================================ */
+
+/* Ultra pequeños - Móviles (320px - 480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 0.95rem !important;
+    }
+
+    .container {
+        padding: 0 0.75rem !important;
+    }
+
+    .nav-container {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    .carousel-title {
+        font-size: 1.2rem !important;
+    }
+
+    .about-card {
+        padding: 1rem !important;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .phase-card {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .phase-icon {
+        font-size: 2rem !important;
+    }
+
+    .lab-icon {
+        font-size: 2.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 1.5rem !important;
+    }
+
+    .form-group {
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Tablets pequeños - Móviles grandes (481px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+    html {
+        font-size: 15px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+    }
+
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+
+    .carousel-title {
+        font-size: 1.5rem !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Tablets (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .section-title {
+        font-size: 2.2rem !important;
+    }
+
+    .hero-title {
+        font-size: 3rem !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Pantallas grandes (1025px+) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+/* Optimizaciones generales para todos los dispositivos */
+@media (max-width: 768px) {
+    /* Reducir padding en secciones */
+    .featured-section,
+    .about-section,
+    .projects-section,
+    .gallery-section,
+    .phases-section,
+    .lab-section,
+    .contact-section {
+        padding: 3rem 0 !important;
+    }
+
+    /* Mejorar iconos en móvil */
+    .gallery-icon,
+    .phase-icon,
+    .lab-icon,
+    .feature-icon {
+        max-width: 100%;
+    }
+
+    /* Mejorar botones en móvil */
+    .cta-button,
+    .contact-cta-button,
+    .form-submit {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+
+    /* Carrusel más compacto */
+    .carousel-image {
+        height: 300px !important;
+    }
+
+    /* Header más compacto en móvil */
+    .header {
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .logo-circle {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/* Pantallas ultra anchas (2000px+) */
+@media (min-width: 2000px) {
+    .container {
+        max-width: 1400px !important;
+    }
+
+    .hero-title {
+        font-size: 5.5rem !important;
+    }
+
+    .section-title {
+        font-size: 3.5rem !important;
+    }
 }
