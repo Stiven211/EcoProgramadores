@@ -43,10 +43,28 @@
         }
 
         .project-detail-content {
-            background: white;
+            color: white;
             border-radius: var(--radius-lg);
             padding: 2rem;
             box-shadow: var(--shadow-xl);
+            animation: project-detail-content 15s ease infinite;
+            background: linear-gradient(to right, var(--color-primary-dark), var(--color-deep-green));
+            background-size: 400% 400%;
+        }
+        @keyframes project-detail-content{
+            0%{
+                background-position:0% 50%;
+            }
+            50%{
+                background-position:100% 50%;
+            }
+            100%{
+                background-position:0% 50%;
+            }
+        }
+        .project-detail-content img {
+            display: flex;
+
         }
 
         .project-detail h3 {
@@ -80,13 +98,13 @@
             background: var(--color-accent-neon);
             transform: scale(1.05);
         }
-        
+
         .iframe-container {
             width: 100%;
             max-width: 485px;
             margin: 0 auto;
         }
-        
+
         .iframe-container iframe {
             width: 100%;
             height: auto;
@@ -122,14 +140,17 @@
             </div>
 
             <div class="project-detail-content">
-                <h3>🎮 Juego en Scratch</h3>
+                <h1 style="text-align: center; font-weight: bold;">Juego en Scratch🎮</h1>
                 <div class="iframe-container">
-                    <p>Solo Cumputador</p>
+                    <p style="text-align: center; font-weight: bold;">Solo Cumputador</p>
                     <iframe src="https://scratch.mit.edu/projects/1280207905/embed" allowtransparency="true" width="485"
-                            height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                    <p style="text-align: center; font-weight: bold;">Eco-pixel👾</p>
+                    <iframe src="https://scratch.mit.edu/projects/1317839316/embed" allowtransparency="true" width="485"
+                        height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
                 </div>
 
-                <h3>📸 Proceso de Creación</h3>
+                <h3 style="color:white;">📸 Proceso de Creación de juego 1</h3>
                 <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/WhatsApp Image 2025-10-25 at 4.52.12 PM.jpeg"
                     alt="Juego 1">
                 <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/WhatsApp Image 2025-10-25 at 4.52.12 PM (1).jpeg"
@@ -138,11 +159,16 @@
                     alt="Juego 3">
                 <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/WhatsApp Image 2025-10-25 at 4.52.13 PM.jpeg"
                     alt="Juego 4">
+                <h3 style="color:white;">📸 Proceso de Creación de juego 2</h3>
+                <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/Captura de pantalla (346).png" alt="Juego 5">
+                <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/Captura de pantalla (347).png" alt="Juego 6">
+                <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/Captura de pantalla (348).png" alt="Juego 7">
+                <img src="Ecoprogramadores/Juego de clasificación de residuos/Proceso del juego/Captura de pantalla (349).png" alt="Juegp 8">
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>   
 </body>
 
 </html>
