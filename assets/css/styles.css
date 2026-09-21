@@ -76,6 +76,29 @@ button {
     background: none;
 }
 
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary-dark);
+    color: var(--color-accent-neon);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    z-index: 10000;
+    transition: top 0.3s ease;
+    box-shadow: var(--shadow-xl);
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 3px solid var(--color-accent-neon);
+    outline-offset: 2px;
+}
+
 /* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 10px;
@@ -438,10 +461,6 @@ button {
 .cta-button:hover {
     background: var(--color-accent-neon);
     transform: scale(1.05);
-}
-
-.chevron-icon {
-    display: inline-block;
 }
 
 .scroll-indicator {
@@ -853,22 +872,13 @@ button {
 .teacher-name {
     font-weight: 700;
     color: var(--color-primary-dark);
+    font-family: var(--font-primary);
     font-size: 1.1rem;
 }
 
 .teacher-label {
     color: var(--color-primary-medium);
     font-weight: 600;
-}
-
-.teacher-name {
-    color: var(--color-primary-dark);
-    font-family: var(--font-primary);
-    font-weight: 600;
-}
-
-.teacher-label {
-    color: var(--color-primary-medium);
     font-size: 0.875rem;
 }
 
@@ -1036,6 +1046,18 @@ button {
     --main-color: #ff9100; --pulse-color: rgba(255,145,0,0.5); 
     --pulse-glow: rgba(255,145,0,0.3); --bright-color: #ffb74d; 
 }
+.sofia   { 
+    --main-color: #808000; --pulse-color: rgba(128,128,0,0.5); 
+    --pulse-glow: rgba(128,128,0,0.3); --bright-color: #9acd32; 
+}
+.melany  { 
+    --main-color: #0fd11c; --pulse-color: rgba(15,209,28,0.5); 
+    --pulse-glow: rgba(15,209,28,0.3); --bright-color: #2dff4a; 
+}
+.alexa    { 
+    --main-color: #8B5A2B; --pulse-color: rgba(139,90,43,0.5); 
+    --pulse-glow: rgba(139,90,43,0.3); --bright-color: #b07a3d; 
+}
 .Cristian { 
     --main-color: #0d1b3d; --pulse-color: rgba(13,27,61,0.6); 
     --pulse-glow: rgba(13,27,61,0.3); --bright-color: #1e3a6e; 
@@ -1044,7 +1066,6 @@ button {
     --main-color: #FF00FF; --pulse-color: rgba(255, 0, 255, 0.6);
     --pulse-glow: rgba(255, 0, 255, 0.3); --bright-color: #ff66ff;
 }
-
 
 
 
@@ -1090,6 +1111,60 @@ button {
 .view-more-icon {
     font-size: 0.8rem;
     transition: transform 0.3s ease;
+}
+
+/* Gallery View More Button */
+.gallery-view-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.gallery-view-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--color-accent-turquoise), var(--color-primary-green));
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    border: none;
+}
+
+.gallery-view-more-btn:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+    background: linear-gradient(135deg, var(--color-accent-neon), var(--color-accent-turquoise));
+}
+
+.gallery-view-more-btn .view-more-icon {
+    transition: transform 0.3s ease;
+}
+
+.gallery-view-more-btn[aria-expanded="true"] .view-more-icon {
+    transform: rotate(180deg);
+}
+
+/* Gallery More: ocultos inicialmente pero flujo en grid */
+.gallery-more {
+    display: contents;
+}
+
+.gallery-more.hidden {
+    display: none;
+}
+
+/* Image Download Protection */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
 }
 
 /* Carousel Image Placeholder */
@@ -2382,6 +2457,197 @@ a.gallery-card-link:hover .gallery-card {
     will-change: color;
 }
 
+
+/* Timeline de fases */
+.phases-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent-turquoise), var(--color-accent-neon));
+    border-radius: 2px;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-accent-neon);
+    border: 3px solid var(--color-primary-dark);
+    transform: translateY(-50%);
+    box-shadow: 0 0 15px rgba(0, 247, 113, 0.6);
+}
+
+.phase-1-marker {
+    left: 25%;
+    background: var(--color-accent-turquoise);
+    box-shadow: 0 0 15px rgba(0, 200, 230, 0.6);
+}
+
+.phase-2-marker {
+    left: 75%;
+}
+
+/* Header de fase con badge */
+.phase-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.phase-badge {
+    display: inline-block;
+    background: rgba(0, 200, 230, 0.2);
+    color: var(--color-accent-turquoise);
+    border: 1px solid var(--color-accent-turquoise);
+    border-radius: var(--radius-full);
+    padding: 0.35rem 1.2rem;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.phase-badge.current {
+    background: rgba(0, 247, 113, 0.2);
+    color: var(--color-accent-neon);
+    border-color: var(--color-accent-neon);
+    animation: pulse-neon 2s ease-in-out infinite;
+}
+
+.phase-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.phase-1 .phase-description {
+    color: #90b190;
+}
+
+/* Meta tags de fase */
+.phase-meta {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.phase-tag {
+    display: inline-block;
+    background: rgba(0, 200, 230, 0.12);
+    color: var(--color-accent-turquoise);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(0, 200, 230, 0.25);
+}
+
+.phase-2 .phase-tag {
+    background: rgba(0, 247, 113, 0.12);
+    color: var(--color-accent-neon);
+    border-color: rgba(0, 247, 113, 0.25);
+}
+
+.phase-tag.highlight {
+    background: rgba(0, 247, 113, 0.25);
+    color: white;
+    font-weight: 700;
+    border-color: var(--color-accent-neon);
+}
+
+/* Intro del Lab */
+.lab-intro {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+}
+
+/* Highlights del Lab */
+.lab-highlights {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.lab-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(0, 247, 113, 0.12);
+    color: var(--color-accent-neon);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(0, 247, 113, 0.25);
+}
+
+.lab-highlight i {
+    font-size: 0.7rem;
+}
+
+/* Estadísticas del Lab */
+.lab-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.lab-stat {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 200, 230, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.lab-stat-number {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--color-accent-turquoise), var(--color-accent-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.lab-stat-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
 
 .logo-circle img,
 .hero-logo img {

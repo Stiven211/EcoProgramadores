@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <meta name="description" content="Prototipo Punto Ecológico: prototipo de contenedor inteligente para reciclaje de EcoProgramadores STEAM MUTIS">
     <title>Prototipo Punto Ecológico | EcoProgramadores STEAM MUTIS</title>
+    <link rel="canonical" href="https://ecoprogramadores.github.io/proyecto-prototipo.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prototipo Punto Ecológico | EcoProgramadores STEAM MUTIS">
+    <meta property="og:description" content="Prototipo de contenedor inteligente para reciclaje">
+    <meta property="og:image" content="assets/img/logo/logo/logo.jpg">
+    <meta property="og:url" content="https://ecoprogramadores.github.io/proyecto-prototipo.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Prototipo Punto Ecológico Inteligente","description":"Prototipo de contenedor inteligente para reciclaje con IoT","applicationCategory":"IoT Application","author":{"@type":"Organization","name":"EcoProgramadores STEAM MUTIS"}}
+    </script>
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"EcoProgramadores STEAM MUTIS","url":"https://ecoprogramadores.github.io/","logo":"https://ecoprogramadores.github.io/assets/img/logo/logo/logo.jpg","description":"Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad"}
+    </script>
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         .project-detail {
@@ -75,21 +93,25 @@
 </head>
 
 <body>
+
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <header id="header" class="header">
-        <nav class="nav-container">
+        <nav class="nav-container" aria-label="Navegación principal">
             <div class="nav-content">
                 <div class="logo-section">
                     <div class="logo-circle">
-                        <img src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores">
+                        <img loading="lazy" src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores">
                     </div>
                     <span class="logo-text">EcoProgramadores</span>
                 </div>
-                <a href="index.html#gallery" class="back-button">
+                <a href="index.html#gallery" class="back-button" aria-label="Volver a la galería de proyectos">
                     ← Volver
                 </a>
             </div>
         </nav>
     </header>
+
+    <main id="main-content" role="main">
 
     <section class="project-detail">
         <div class="project-detail-container">
@@ -115,7 +137,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
-</body>
+</main>
 
+</body>
 </html>

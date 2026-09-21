@@ -4,7 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <meta name="description" content="EcoVoces Podcast: podcast sobre ecología y medio ambiente de EcoProgramadores STEAM MUTIS">
     <title>EcoVoces Podcast | EcoProgramadores STEAM MUTIS</title>
+    <link rel="canonical" href="https://ecoprogramadores.github.io/proyecto-podcast.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EcoVoces Podcast | EcoProgramadores STEAM MUTIS">
+    <meta property="og:description" content="Podcast sobre ecología y medio ambiente">
+    <meta property="og:image" content="assets/img/logo/logo/logo.jpg">
+    <meta property="og:url" content="https://ecoprogramadores.github.io/proyecto-podcast.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AudioObject","name":"EcoVoces Podcast","description":"Podcast sobre ecología y medio ambiente","encodingFormat":"audio/mpeg","author":{"@type":"Organization","name":"EcoProgramadores STEAM MUTIS"}}
+    </script>
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"EcoProgramadores STEAM MUTIS","url":"https://ecoprogramadores.github.io/","logo":"https://ecoprogramadores.github.io/assets/img/logo/logo/logo.jpg","description":"Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad"}
+    </script>
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         .project-detail {
@@ -83,21 +101,25 @@
 </head>
 
 <body>
+
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
     <header id="header" class="header">
-        <nav class="nav-container">
+        <nav class="nav-container" aria-label="Navegación principal">
             <div class="nav-content">
                 <div class="logo-section">
                     <div class="logo-circle">
-                        <img src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores">
+                        <img loading="lazy" src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores">
                     </div>
                     <span class="logo-text">EcoProgramadores</span>
                 </div>
-                <a href="index.html#gallery" class="back-button">
+                <a href="index.html#gallery" class="back-button" aria-label="Volver a la galería de proyectos">
                     ← Volver
                 </a>
             </div>
         </nav>
     </header>
+
+    <main id="main-content" role="main">
 
     <section class="project-detail">
         <div class="project-detail-container">
@@ -111,7 +133,7 @@
             <div class="project-detail-content">
                 <h3>🎧 Episodio 1</h3>
                 <audio controls>
-                    <source src="Ecoprogramadores/Podcast%20EcoVoces/podcast-Ecovoces-capitulo-1.mp3"
+                    <source src="Ecoprogramadores/Podcast EcoVoces/podcast-Ecovoces-capitulo-1.mp3"
                         type="audio/mpeg">
                     Tu navegador no soporta audio
                 </audio>
@@ -119,7 +141,7 @@
                 
                 <h3>🎧 Episodio 2</h3>
                 <audio controls>
-                    <source src="Ecoprogramadores/Podcast%20EcoVoces/podcast-Ecovoces-capitulo-2.mp3"
+                    <source src="Ecoprogramadores/Podcast EcoVoces/podcast-Ecovoces-capitulo-2.mp3"
                         type="audio/mpeg">
                     Tu navegador no soporta audio
                 </audio>
@@ -128,7 +150,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
-</body>
+</main>
 
+</body>
 </html>

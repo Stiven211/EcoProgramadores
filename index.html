@@ -4,10 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="EcoProgramadores STEAM MUTIS - Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <meta name="description" content="EcoProgramadores STEAM MUTIS - Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad">
     <meta name="keywords" content="STEAM, ecología, programación, Celestino Mutis, proyectos sostenibles, educación">
     <title>EcoProgramadores STEAM MUTIS | Innovación y Sostenibilidad</title>
+    <link rel="canonical" href="https://ecoprogramadores.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EcoProgramadores STEAM MUTIS | Innovación y Sostenibilidad">
+    <meta property="og:description" content="Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad">
+    <meta property="og:image" content="assets/img/logo/logo/logo.jpg">
+    <meta property="og:url" content="https://ecoprogramadores.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EcoProgramadores STEAM MUTIS | Innovación y Sostenibilidad">
+    <meta name="twitter:description" content="Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad">
+    <meta name="twitter:image" content="assets/img/logo/logo/logo.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"EcoProgramadores STEAM MUTIS","url":"https://ecoprogramadores.github.io/","potentialAction":{"@type":"SearchAction","target":"https://ecoprogramadores.github.io/?q={search_term_string}","query-input":"required name=search_term_string"}}
+    </script>
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"EcoProgramadores STEAM MUTIS","url":"https://ecoprogramadores.github.io/","logo":"https://ecoprogramadores.github.io/assets/img/logo/logo/logo.jpg","description":"Grupo de estudiantes del Colegio Celestino Mutis creando proyectos innovadores en ecología, programación y sostenibilidad","sameAs":["https://github.com/Stiven211/EcoProgramadores"]}
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +36,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive-phases.css">
     
     <!-- Font Awesome Icons (CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,23 +46,26 @@
 
 <body>
 
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
     <!-- ============================================
         HEADER - BARRA DE NAVEGACIÓN FIJA
     ============================================ -->
     <header id="header" class="header">
-        <nav class="nav-container">
+        <nav class="nav-container" role="navigation" aria-label="Navegación principal">
             <div class="nav-content">
                 <!-- LOGO PLACEHOLDER - Reemplaza este div con tu logo real -->
                 <div class="logo-section">
                     <div class="logo-circle">
-                        <img src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
+                        <img loading="lazy" src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
                     </div>
                     <span class="logo-text">EcoProgramadores</span>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <div class="nav-links" id="navLinks">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">Hogar</a>
                     <a href="#about" class="nav-link">Quiénes Somos</a>
                     <a href="#Team" class="nav-link">Equipo</a>
                     <a href="#gallery" class="nav-link">Galería</a>
@@ -54,7 +76,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -62,8 +84,8 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="#home" class="mobile-nav-link">Home</a>
+            <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú móvil">
+                <a href="#home" class="mobile-nav-link">Inicio</a>
                 <a href="#about" class="mobile-nav-link">Quiénes Somos</a>
                 <a href="#Team" class="mobile-nav-link">Equipo</a>
                 <a href="#gallery" class="mobile-nav-link">Galería</a>
@@ -74,6 +96,8 @@
             </div>
         </nav>
     </header>
+
+    <main id="main-content" role="main">
 
     <!-- ============================================
             SECTION: HERO - BIENVENIDA
@@ -88,7 +112,7 @@
         <div class="container hero-content">
             <!-- LOGO HERO PLACEHOLDER - Reemplaza este div con tu logo grande -->
             <div class="logo-circle hero-logo">
-                <img src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
+                <img loading="lazy" src="assets/img/logo/logo/logo.jpg" alt="Logo EcoProgramadores STEAM MUTIS">
             </div>
 
             <h1 class="hero-title fade-in delay-1">
@@ -215,7 +239,7 @@
             <div class="about-grid">
                 <!-- Left: Image -->
                 <div class="about-image-container">
-                    <img src="assets/img/equipo/Equipo-de-trabajo.jpg" alt="Equipo EcoProgramadores trabajando"
+                    <img loading="lazy" src="assets/img/equipo/Equipo-de-trabajo.jpg" alt="Equipo EcoProgramadores trabajando"
                         class="about-image">
                     <div class="about-image-overlay"></div>
                     <!-- Placeholder para foto del equipo -->
@@ -255,7 +279,7 @@
                         <!-- Foto de la profesora -->
                         <div class="teacher-placeholder">
                             <div class="teacher-photo-placeholder">
-                                <img src="assets/img/equipo/profesora-lider.jpg" alt="Profesora Nathalie Rosales">
+                                <img loading="lazy" src="assets/img/equipo/profesora-lider.jpg" alt="Profesora Nathalie Rosales">
                             </div>
                             <div>
                                 <p class="teacher-name">Profesora Líder</p>
@@ -330,7 +354,7 @@
                     <!-- Integrante 1 - Stiven -->
                     <div class="team-member">
                         <div class="team-photo-placeholder stiven">
-                            <img src="assets/img/equipo/Stiven-1.png" alt="Stiven Urrego - Desarrollador de software">
+                            <img loading="lazy" src="assets/img/equipo/Stiven-1.png" alt="Stiven Urrego - Desarrollador de software">
                         </div>
                         <p class="team-member-name">🛠️Stiven Urrego🔧 <!--<span class="member-grade">Grado 11</span>-->
                         </p>
@@ -340,7 +364,7 @@
                     <!-- Integrante 2 - Isa -->
                     <div class="team-member">
                         <div class="team-photo-placeholder isa">
-                            <img src="assets/img/equipo/Isa-2.jpg" alt="Isa Quintero - Desarrolladora">
+                            <img loading="lazy" src="assets/img/equipo/Isa-2.jpg" alt="Isabella Quevedo - Divulgadora y desarrolladora de prototipos">
                         </div>
                         <p class="team-member-name">★Isabella Quevedo★</p>
                         <p class="team-member-label">Divulgadora y desarrolladora de prototipos <br>Integrante 2</p>
@@ -349,7 +373,7 @@
                     <!-- Integrante 3 - Mariana -->
                     <div class="team-member">
                         <div class="team-photo-placeholder Mariana">
-                            <img src="assets/img/equipo/Mariana.jpg"
+                            <img loading="lazy" src="assets/img/equipo/Mariana.jpg"
                                 alt="Mariana Acosta - Divulgadora y desarrolladora de prototipos">
                         </div>
                         <p class="team-member-name">Mariana Acosta🥰</p>
@@ -359,91 +383,82 @@
                     <!-- Integrante 4 - Denisse -->
                     <div class="team-member">
                         <div class="team-photo-placeholder denisse">
-                            <img src="assets/img/equipo/Denisse.jpg" alt="Denisse Rodríguez - Programadora">
+                            <img loading="lazy" src="assets/img/equipo/Denisse.jpg" alt="Denisse Rodríguez - Programadora">
                         </div>
                         <p class="team-member-name">Denisse Rodríguez🌺</p>
-                        <p class="team-member-label">Programadora de codigo <br>Integrante 4</p>
+                        <p class="team-member-label">Programadora de código <br>Integrante 4</p>
                     </div>
 
-                    <!-- Resto de integrantes (ocultos inicialmente) -->
-                    <div class="team-more" id="teamMore">
-                        <!-- Integrante 5 - Kevin -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder kevin">
-                                <img src="assets/img/equipo/Kevin.jpg" alt="Kevin Montoya - Integrante">
-                            </div>
-                            <p class="team-member-name">Kevin Montoya</p>
-                            <p class="team-member-label">Ayudante de creador de videojuegos <br>Integrante 5</p>
+                    <!-- Integrante 5 - Kevin -->
+                    <div class="team-more">
+                    <div class="team-member">
+                        <div class="team-photo-placeholder kevin">
+                            <img loading="lazy" src="assets/img/equipo/Kevin.jpeg" alt="Kevin Montoya - Ayudante de creador de videojuegos">
                         </div>
-
-                        <!-- Integrante 6 - Sofía -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder">
-                                <img src="assets/img/equipo/Sofia.jpg" alt="Valery Villagas - Diseñadora">
-                            </div>
-                            <p class="team-member-name">Sofia Villagas</p>
-                            <p class="team-member-label">Diseñadora <br>Integrante 6</p>
-                        </div>
-
-                        <!-- Integrante 7 - Karel -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder karel">
-                                <img src="assets/img/equipo/Karel.jpg"
-                                    alt="Karel Gonzales - Desarrollador de videojuegos">
-                            </div>
-                            <p class="team-member-name">Karel Gonzales</p>
-                            <p class="team-member-label">Desarrollador de videojuegos <br>Integrante 7</p>
-                        </div>
-
-                        <!-- Integrante 8 - Placeholder -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder Cristian">
-                                <img src="assets/img/equipo/Cristian.jpg" alt="Cristian">
-                            </div>
-                            <p class="team-member-name">Cristian sanpedro</p>
-                            <p class="team-member-label">Pendiente de rol<br>Integrante 8</p>
-                        </div>
-
-                        <!-- Integrante 9 - Placeholder -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder Nikol">
-                                <img src="assets/img/equipo/Nikol.jpg" alt="Nikol Villa">
-                            </div>
-                            <p class="team-member-name">Nikol Villa</p>
-                            <p class="team-member-label">Pendiente de rol<br>Integrante 9</p>
-                        </div>
-
-                        <!-- Integrante 10 - Placeholder -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder new-member">
-                                <span class="member-placeholder-text">+</span>
-                            </div>
-                            <p class="team-member-name">Nuevo Integrante</p>
-                            <p class="team-member-label">Pendiente de foto<br>Integrante 10</p>
-                        </div>
-
-                        <!-- Integrante 11 - Placeholder -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder new-member">
-                                <span class="member-placeholder-text">+</span>
-                            </div>
-                            <p class="team-member-name">Nuevo Integrante</p>
-                            <p class="team-member-label">Pendiente de foto<br>Integrante 11</p>
-                        </div>
-
-                        <!-- Integrante 12 - Placeholder -->
-                        <div class="team-member">
-                            <div class="team-photo-placeholder new-member">
-                                <span class="member-placeholder-text">+</span>
-                            </div>
-                            <p class="team-member-name">Nuevo Integrante</p>
-                            <p class="team-member-label">Pendiente de foto<br>Integrante 12</p>
-                        </div>
+                        <p class="team-member-name">Kevin Montoya</p>
+                        <p class="team-member-label">Ayudante de creador de videojuegos <br>Integrante 5</p>
                     </div>
 
-                    <!-- Botón Ver más -->
-                    <button class="team-view-more" id="teamViewMore" onclick="toggleTeamMembers()">
-                        <span class="view-more-text">Ver más</span>
+                    <!-- Integrante 6 - Sofía -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder sofia">
+                            <img loading="lazy" src="assets/img/equipo/Sofia.jpg" alt="Sofia Villagas - Diseñadora">
+                        </div>
+                        <p class="team-member-name">Sofia Villagas</p>
+                        <p class="team-member-label">Diseñadora <br>Integrante 6</p>
+                    </div>
+
+                    <!-- Integrante 7 - Karel -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder karel">
+                            <img loading="lazy" src="assets/img/equipo/Karel.jpg"
+                                alt="Karel Gonzales - Desarrollador de videojuegos">
+                        </div>
+                        <p class="team-member-name">Karel Gonzales</p>
+                        <p class="team-member-label">Desarrollador de videojuegos <br>Integrante 7</p>
+                    </div>
+
+                    <!-- Integrante 8 - Alexa (Paula Prieto) -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder alexa">
+                            <img loading="lazy" src="assets/img/equipo/Alexa.jpeg" alt="Paula Prieto - Integrante del equipo">
+                        </div>
+                        <p class="team-member-name">Paula Prieto</p>
+                        <p class="team-member-label">Colaborador de diseño de Maqueina Extruc. <br>Integrante 8 <br> </p>
+                    </div>
+
+                    <!-- Integrante 9 - Melany Lopez -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder melany">
+                            <img loading="lazy" src="assets/img/equipo/Melany.jpeg" alt="Melany Lopez - Integrante del equipo">
+                        </div>
+                        <p class="team-member-name">Melany Lopez</p>
+                        <p class="team-member-label">Diseñadora <br>Integrante 9<br></p>
+                    </div>
+
+                    <!-- Integrante 10 - Nikol Villa -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder Nikol">
+                            <img loading="lazy" src="assets/img/equipo/Nikol.jpg" alt="Nikol Villa - Integrante del equipo">
+                        </div>
+                        <p class="team-member-name">Nikol Villa</p>
+                        <p class="team-member-label">Integrante 10</p>
+                    </div>
+
+                    <!-- Integrante 11 - Cristian Sanpedro -->
+                    <div class="team-member">
+                        <div class="team-photo-placeholder Cristian">
+                            <img loading="lazy" src="assets/img/equipo/Cristian.jpg" alt="Cristian Sanpedro - Integrante del equipo">
+                        </div>
+                        <p class="team-member-name">Cristian Sanpedro</p>
+                        <p class="team-member-label">Integrante 11</p>
+                    </div>
+                    </div>
+
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="team-view-more" id="teamViewMore" aria-expanded="false">
+                        <span class="view-more-text">Ver más integrantes</span>
                         <span class="view-more-icon">▼</span>
                     </button>
                 </div>
@@ -517,8 +532,9 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 5: Juego de Residuos -->
-                <a href="proyecto-juego.html" class="gallery-card-link">
+            <!-- Proyecto 5: Juego de Residuos -->
+            <div class="gallery-more hidden">
+            <a href="proyecto-juego.html" class="gallery-card-link">
                     <div class="gallery-card">
                         <div class="gallery-icon"><i class="fas fa-gamepad"></i></div>
                         <h3 class="gallery-title">Juego de Clasificación</h3>
@@ -529,8 +545,6 @@
                         </div>
                     </div>
                 </a>
-
-
 
                 <!-- Proyecto 6: Animación Digital -->
                 <a href="proyecto-animacion.html" class="gallery-card-link">
@@ -558,6 +572,15 @@
                     </div>
                 </a>
             </div>
+            </div>
+
+            <!-- Botón Ver Más -->
+            <div class="gallery-view-more-container">
+                <button class="gallery-view-more-btn" id="galleryViewMore" aria-expanded="false">
+                    <span class="view-more-text">Ver más proyectos</span>
+                    <span class="view-more-icon">▼</span>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -565,59 +588,102 @@
         SECTION: FASES DEL PROYECTO 
         (Debajo de Galería)
     ============================================ -->
-    <section id="fases-proyecto" class="phases-section">
+    <section id="fases-proyecto" class="phases-section" aria-labelledby="fases-title">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title dark">Nuestras Fases: De Prototipos a Manufactura</h2>
+                <h2 id="fases-title" class="section-title dark">Nuestras Fases: De Prototipos a Manufactura</h2>
                 <p class="section-subtitle dark">Un resumen de nuestro progreso y la visión para 2026</p>
+            </div>
+
+            <!-- Timeline visual -->
+            <div class="phases-timeline" aria-hidden="true">
+                <div class="timeline-line"></div>
+                <div class="timeline-marker phase-1-marker" aria-hidden="true"></div>
+                <div class="timeline-marker phase-2-marker" aria-hidden="true"></div>
             </div>
 
             <!-- Fase 1: Logros Anteriores -->
             <div class="phase-block phase-1">
-                <h3 class="phase-title"><i class="fas fa-thumbtack"></i> Fase 1: Cimientos y Prototipos (2025)</h3>
+                <div class="phase-header">
+                    <div class="phase-badge">2025</div>
+                    <h3 class="phase-title"><i class="fas fa-thumbtack" aria-hidden="true"></i> Fase 1: Cimientos y Prototipos</h3>
+                    <p class="phase-description">Nuestra base: experimentación, aprendizaje y primeros prototipos funcionales</p>
+                </div>
                 <div class="phase-grid">
-                    <div class="phase-card">
-                        <div class="phase-icon"><i class="fas fa-gamepad"></i></div>
+                    <article class="phase-card">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-gamepad"></i></div>
                         <h4>Videojuegos Educativos</h4>
-                        <p>Desarrollo de juegos interactivos en Scratch para la clasificación de residuos.</p>
-                    </div>
-                    <div class="phase-card">
-                        <div class="phase-icon"><i class="fas fa-microphone"></i></div>
+                        <p>Desarrollo de juegos interactivos en Scratch para la clasificación de residuos. Dos versiones publicadas con más de 500 partidas jugadas en la comunidad educativa.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag">Scratch 3.0</span>
+                            <span class="phase-tag">Educativo</span>
+                        </div>
+                    </article>
+                    <article class="phase-card">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-microphone"></i></div>
                         <h4>Podcast EcoVoces</h4>
-                        <p>Primera temporada con contenido educativo sobre ecología y sostenibilidad.</p>
-                    </div>
-                    <div class="phase-card">
-                        <div class="phase-icon"><i class="fas fa-cog"></i></div>
+                        <p>Primera temporada con 2 episodios sobre ecología y sostenibilidad. Disponible en plataformas principales, enfocado en ciencia ciudadana y acción climática juvenil.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag">Audio</span>
+                            <span class="phase-tag">Divulgación</span>
+                        </div>
+                    </article>
+                    <article class="phase-card">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-cog"></i></div>
                         <h4>Prototipado Inicial</h4>
-                        <p>Creación de los primeros modelos del Punto Ecológico Inteligente con IoT.</p>
-                    </div>
+                        <p>Creación de los primeros modelos del Punto Ecológico Inteligente con IoT: sensores de llenado, conectividad Wi-Fi y dashboard de monitoreo en tiempo real.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag">IoT</span>
+                            <span class="phase-tag">Hardware</span>
+                        </div>
+                    </article>
                 </div>
             </div>
 
             <!-- Fase 2: El Futuro 2026 -->
             <div class="phase-block phase-2">
-                <h3 class="phase-title"><i class="fas fa-rocket"></i> Fase 2: Escalamiento e Innovación (2026)</h3>
+                <div class="phase-header">
+                    <div class="phase-badge current">2026</div>
+                    <h3 class="phase-title"><i class="fas fa-rocket" aria-hidden="true"></i> Fase 2: Escalamiento e Innovación</h3>
+                    <p class="phase-description">Manufactura circular, incentivos inteligentes y transferencia tecnológica real</p>
+                </div>
                 <div class="phase-grid">
-                    <div class="phase-card featured">
-                        <div class="phase-icon"><i class="fas fa-industry"></i></div>
+                    <article class="phase-card featured">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-industry"></i></div>
                         <h4>Planta de Filamento PET</h4>
-                        <p>Máquina extrusora para fabricar filamento 3D a partir de botellas PET recicladas.</p>
-                    </div>
-                    <div class="phase-card">
-                        <div class="phase-icon"><i class="fas fa-coins"></i></div>
+                        <p>Construcción de máquina extrusora para fabricar filamento de impresión 3D a partir de botellas PET recicladas. Economía circular aplicada: de residuo a recurso para makers y educación.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag highlight">Joya de la corona</span>
+                            <span class="phase-tag">Manufactura</span>
+                        </div>
+                    </article>
+                    <article class="phase-card">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-coins"></i></div>
                         <h4>Colector PET con Incentivos</h4>
-                        <p>Sistema de recompensas gamificado para incentivar el reciclaje en la comunidad.</p>
-                    </div>
-                    <div class="phase-card">
-                        <div class="phase-icon"><i class="fas fa-flask"></i></div>
+                        <p>Nuevo prototipo que entrega recompensas (monedas digitales, bonos canjeables) por cada botella depositada. Gamificación del reciclaje con dashboard de impacto personal y comunitario.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag">IoT + Gamificación</span>
+                            <span class="phase-tag">Incentivos</span>
+                        </div>
+                    </article>
+                    <article class="phase-card">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-flask"></i></div>
                         <h4>Observatorio OVAIRE</h4>
-                        <p>Integración de ciencia ciudadana y datos reales en nuestras tecnologías.</p>
-                    </div>
-                    <div class="phase-card">
-                        <div class="phase-icon"><i class="fas fa-palette"></i></div>
-                        <h4>Laboratorio STEAM</h4>
-                        <p>Transformación del aula con mural creativo y conectividad IoT de alta velocidad.</p>
-                    </div>
+                        <p>Integración de ciencia ciudadana y datos reales en nuestras tecnologías. Red de sensores ambientales escolares alimentando modelos predictivos de calidad del aire y gestión de residuos.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag">Ciencia Ciudadana</span>
+                            <span class="phase-tag">Data Science</span>
+                        </div>
+                    </article>
+                    <article class="phase-card">
+                        <div class="phase-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
+                        <h4>Laboratorio STEAM 2.0</h4>
+                        <p>Transformación del aula con mural creativo, mobiliario colaborativo y conectividad IoT de alta velocidad. Espacio vivo para prototipado rápido, talleres y mentoría intergeneracional.</p>
+                        <div class="phase-meta">
+                            <span class="phase-tag">Infraestructura</span>
+                            <span class="phase-tag">Comunidad</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -626,27 +692,59 @@
     <!-- ============================================
         SECTION: NUESTRO LABORATORIO STEAM
     ============================================ -->
-    <section id="lab-steam" class="lab-section">
+    <section id="lab-steam" class="lab-section" aria-labelledby="lab-title">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title light">Nuestro Laboratorio STEAM</h2>
+                <h2 id="lab-title" class="section-title light">Nuestro Laboratorio STEAM</h2>
                 <p class="section-subtitle light">La infraestructura que impulsa nuestra innovación y creatividad</p>
             </div>
+
+            <div class="lab-intro">
+                <p>Más que un aula: un ecosistema de aprendizaje donde la creatividad se encuentra con la tecnología para resolver problemas reales. Cada rincón está diseñado para fomentar la experimentación, la colaboración y el pensamiento crítico.</p>
+            </div>
+
             <div class="lab-grid">
-                <div class="lab-card">
-                    <div class="lab-icon"><i class="fas fa-palette"></i></div>
+                <article class="lab-card">
+                    <div class="lab-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
                     <h4>Transformación del Aula</h4>
-                    <p>Nuestro mural creativo no solo embellece el espacio, sino que justifica la necesidad de materiales de arte y mobiliario colaborativo para el trabajo en equipo.</p>
-                </div>
-                <div class="lab-card">
-                    <div class="lab-icon"><i class="fas fa-broadcast-tower"></i></div>
+                    <p>Nuestro mural creativo no solo embellece el espacio, sino que justifica la necesidad de materiales de arte y mobiliario colaborativo para el trabajo en equipo. Mesas modulares, tableros de ideación y una paleta de colores que inspira innovación.</p>
+                    <div class="lab-highlights">
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Mural colaborativo 4x3m</span>
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Mobiliario flexible y ergonómico</span>
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Iluminación LED regulable</span>
+                    </div>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-icon" aria-hidden="true"><i class="fas fa-broadcast-tower"></i></div>
                     <h4>Conectividad e IoT</h4>
-                    <p>Red Wi-Fi de alta velocidad que permite conectar nuestros prototipos a la nube y monitoreo en tiempo real del Observatorio OVAIRE.</p>
-                </div>
-                <div class="lab-card">
-                    <div class="lab-icon"><i class="fas fa-lightbulb"></i></div>
+                    <p>Red Wi-Fi 6 de alta velocidad que permite conectar nuestros prototipos a la nube y monitoreo en tiempo real del Observatorio OVAIRE. Infraestructura lista para edge computing, MQTT y visualización de datos en dashboards interactivos.</p>
+                    <div class="lab-highlights">
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Wi-Fi 6 / 1 Gbps simétrico</span>
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Broker MQTT local (Mosquitto)</span>
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Dashboard Grafana en tiempo real</span>
+                    </div>
+                </article>
+                <article class="lab-card">
+                    <div class="lab-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
                     <h4>Espacio de Innovación</h4>
-                    <p>Centro dedicado a la investigación, desarrollo de prototipos y experimentación con tecnologías sostenibles y ecosistemas circular.</p>
+                    <p>Centro dedicado a la investigación, desarrollo de prototipos y experimentación con tecnologías sostenibles y ecosistemas circular. Impresoras 3D, estación de soldadura, cortadora láser y banco de pruebas para sensores ambientales.</p>
+                    <div class="lab-highlights">
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> 3 Impresoras 3D (FDM/Resina)</span>
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Estación electrónica completa</span>
+                        <span class="lab-highlight"><i class="fas fa-check" aria-hidden="true"></i> Cortadora láser 40W</span>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Estadísticas del Lab -->
+            <div class="lab-stats" aria-label="Estadísticas del laboratorio">
+                <div class="lab-stat">
+                    <span class="lab-stat-number">26</span>
+                    <span class="lab-stat-label">Estudiantes activos</span>
+                </div>
+                <div class="lab-stat">
+                    <span class="lab-stat-number">2</span>
+                    <span class="lab-stat-label">Proyectos en marcha</span>
                 </div>
             </div>
         </div>
@@ -676,24 +774,25 @@
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre"
-                                required>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre" autocomplete="name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
-                                required>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" autocomplete="email" required>
                         </div>
 
                         <div class="form-group">
                             <label for="message" class="form-label">Mensaje</label>
-                            <textarea id="message" name="message" class="form-textarea" rows="6"
-                                placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Escribe tu mensaje aquí..." autocomplete="off" required></textarea>
                         </div>
 
-                        <div id="formSuccess" class="form-success" style="display: none;">
+                        <div id="formSuccess" class="form-success" style="display: none;" role="status" aria-live="polite">
                             ✓ ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                        </div>
+
+                        <div id="formError" class="form-error" style="display: none;" role="alert">
+                            No se pudo enviar el mensaje. Inténtalo de nuevo.
                         </div>
 
                         <button type="submit" class="form-submit" id="submitBtn">
@@ -744,26 +843,7 @@
                             <div>
                                 <h4 class="contact-item-title">Email</h4>
                                 <p class="contact-item-text">
-                                    ecoproprogramadores@gmail.com<br>
-                                    <span class="contact-note"></span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="contact-item-title">Teléfono</h4>
-                                <p class="contact-item-text">
-                                    +57 <br>
-                                    <span class="contact-note"></span>
+                                    ecoprogramadores@gmail.com
                                 </p>
                             </div>
                         </div>
@@ -776,9 +856,8 @@
                             nuestras redes!</p>
 
                         <div class="social-links">
-                            <!-- Facebook - Reemplaza href="#" con URL real -->
                             <a href="https://www.facebook.com/share/17u82Z8myW/" target="_blank"
-                                rel="noopener noreferrer" class="social-link">
+                                rel="noopener noreferrer" class="social-link" aria-label="Facebook EcoProgramadores">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
                                     <path
                                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -837,6 +916,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- ============================================
         FOOTER
     ============================================ -->
@@ -882,31 +963,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
+<!-- JavaScript -->
     <script src="assets/js/script.js"></script>
 
 
-    <!-- <script type="module">
-        // Importamos la misma librería de tu ejemplo
-        import { animate, stagger, splitText } from 'https://esm.sh/animejs';
-
-        // 1. Dividimos el texto del título en letras (chars) automáticamente
-        const { chars } = splitText('.hero-title', { words: false, chars: true });
-
-        // 2. Ejecutamos la animación de salto
-        animate(chars, {
-            // Movimiento vertical (Y)
-            y: [
-                { to: '-2.5rem', ease: 'outExpo', duration: 600 }, // Sube rápido
-                { to: 0, ease: 'outBounce', duration: 1000, delay: 100 } // Cae con rebote
-            ],
-            // Parámetros de la ola
-            delay: stagger(60), // Crea el efecto de ola (60ms entre cada letra)
-            loop: true,         // Se repite infinitamente
-            loopDelay: 2000     // Espera 2 segundos antes de volver a saltar
-        });
-    </script> -->
-
 </body>
-
 </html>
